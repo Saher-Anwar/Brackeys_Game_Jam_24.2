@@ -4,13 +4,14 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     [Header("Components")]
-    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] Rigidbody2D rb;
+    [SerializeField] TrailRenderer tr;
 
     [Header("Movement")]
-    [SerializeField] private float moveSpeed = 5f;         // Base movement speed
-    [SerializeField] private float acceleration = 10f;     // How fast the player accelerates to full speed
-    [SerializeField] private float deceleration = 10f;     // How fast the player slows down when not pressing any keys
-    [SerializeField] private float maxSpeed = 7f;          // Maximum speed the player can reach
+    [SerializeField] float moveSpeed = 5f;         // Base movement speed
+    [SerializeField] float acceleration = 10f;     // How fast the player accelerates to full speed
+    [SerializeField] float deceleration = 10f;     // How fast the player slows down when not pressing any keys
+    [SerializeField] float maxSpeed = 7f;          // Maximum speed the player can reach
 
     [Header("Dash Settings")]
     [SerializeField] bool canDash = true;
@@ -25,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        tr = GetComponent<TrailRenderer>();
     }
 
     void Update()
@@ -69,7 +71,9 @@ public class PlayerMovement : MonoBehaviour
         canDash = false;
         isDashing = true;
         rb.velocity = new Vector2(input.x * dashingPower, input.y * dashingPower);
+        tr.emitting = true;
         yield return new WaitForSeconds(dashingTime);
+        tr.emitting = false;
         isDashing = false;
         yield return new WaitForSeconds(dashingCooldown);
         canDash = true;
