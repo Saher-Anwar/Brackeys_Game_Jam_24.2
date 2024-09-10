@@ -19,6 +19,7 @@ public class PanicBar : MonoBehaviour {
     }
 
     void Update() {
+        // Can remove, just for testing
         IncreasePanicOverTime();
     }
 
