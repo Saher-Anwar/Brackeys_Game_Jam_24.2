@@ -33,4 +33,13 @@ public class Player : MonoBehaviour
 
         Debug.Log("Instantiated bullet and set direction");
     }
+
+    public void TakeDamage(float damage){
+        Debug.Log("Player took damage");
+    }
+
+    public void Die(){
+        Debug.Log("Player died");
+        Destroy(gameObject);
+    }
 }

@@ -1,0 +1,375 @@
+Unity Editor version:    2022.3.38f1 (c5d5a7410213)
+Branch:                  2022.3/staging
+Build type:              Release
+Batch mode:              YES
+System name:             Linux
+Distro version:          #41-Ubuntu SMP PREEMPT_DYNAMIC Fri Aug  2 20:41:06 UTC 2024
+Kernel version:          6.8.0-41-generic
+Architecture:            x86_64
+Available memory:        15887 MB
+Using pre-set license
+Pro License: YES
+
+(Unity:36264): Gtk-CRITICAL **: 13:59:46.768: gtk_window_set_default_icon: assertion 'GDK_IS_PIXBUF (icon)' failed
+
+(Unity:36264): GLib-GObject-CRITICAL **: 13:59:46.768: g_object_unref: assertion 'G_IS_OBJECT (object)' failed
+Desktop is 3840 x 1080 @ 60 Hz
+Initialize udev device monitor.
+
+COMMAND LINE ARGUMENTS:
+Unity
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+/home/saher/Personal/Projects/Unity_Games/CalmBeforeTheStorm
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+36321
+Successfully changed project path to: /home/saher/Personal/Projects/Unity_Games/CalmBeforeTheStorm
+/home/saher/Personal/Projects/Unity_Games/CalmBeforeTheStorm
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [137130204541952]  Target information:
+
+Player connection [137130204541952]  * "[IP] 192.168.4.93 [Port] 0 [Flags] 2 [Guid] 1934460640 [EditorId] 1934460640 [Version] 1048832 [Id] LinuxEditor(16,192.168.4.93) [Debug] 1 [PackageName] LinuxEditor [ProjectName] Editor" 
+
+Player connection [137130204541952]  * "[IP] 172.17.0.1 [Port] 0 [Flags] 2 [Guid] 1934460640 [EditorId] 1934460640 [Version] 1048832 [Id] LinuxEditor(16,192.168.4.93) [Debug] 1 [PackageName] LinuxEditor [ProjectName] Editor" 
+
+Player connection [137130204541952] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [137130204541952] Host joined alternative multi-casting on [225.0.0.222:34997]...
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+Refreshing native plugins compatible for Editor in 2.29 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2022.3.38f1 (c5d5a7410213)
+[Subsystems] Discovering subsystems at path /home/saher/Unity/Hub/Editor/2022.3.38f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path /home/saher/Personal/Projects/Unity_Games/CalmBeforeTheStorm/Assets
+GLX Extensions: GLX_ARB_get_proc_address GLX_ARB_multisample GLX_EXT_visual_info GLX_EXT_visual_rating GLX_EXT_import_context GLX_SGI_video_sync GLX_SGIX_fbconfig GLX_SGIX_pbuffer GLX_SGI_swap_control GLX_EXT_swap_control GLX_EXT_swap_control_tear GLX_EXT_buffer_age GLX_ARB_create_context GLX_ARB_create_context_profile GLX_NV_float_buffer GLX_ARB_fbconfig_float GLX_EXT_texture_from_pixmap GLX_EXT_framebuffer_sRGB GLX_NV_copy_image GLX_EXT_create_context_es_profile GLX_EXT_create_context_es2_profile GLX_ARB_create_context_no_error GLX_ARB_create_context_robustness GLX_NV_delay_before_swap GLX_EXT_stereo_tree GLX_ARB_context_flush_control GLX_NV_robustness_video_memory_purge GLX_NV_multigpu_context 
+Renderer: NVIDIA GeForce RTX 3060/PCIe/SSE2
+Vendor:   NVIDIA Corporation
+Version:  4.5.0 NVIDIA 535.183.01
+GLES:     0
+ GL_AMD_multi_draw_indirect GL_AMD_seamless_cubemap_per_texture GL_AMD_vertex_shader_viewport_index GL_AMD_vertex_shader_layer GL_ARB_arrays_of_arrays GL_ARB_base_instance GL_ARB_bindless_texture GL_ARB_blend_func_extended GL_ARB_buffer_storage GL_ARB_clear_buffer_object GL_ARB_clear_texture GL_ARB_clip_control GL_ARB_color_buffer_float GL_ARB_compressed_texture_pixel_storage GL_ARB_conservative_depth GL_ARB_compute_shader GL_ARB_compute_variable_group_size GL_ARB_conditional_render_inverted GL_ARB_copy_buffer GL_ARB_copy_image GL_ARB_cull_distance GL_ARB_debug_output GL_ARB_depth_buffer_float GL_ARB_depth_clamp GL_ARB_depth_texture GL_ARB_derivative_control GL_ARB_direct_state_access GL_ARB_draw_buffers GL_ARB_draw_buffers_blend GL_ARB_draw_indirect GL_ARB_draw_elements_base_vertex GL_ARB_draw_instanced GL_ARB_enhanced_layouts GL_ARB_ES2_compatibility GL_ARB_ES3_compatibility GL_ARB_ES3_1_compatibility GL_ARB_ES3_2_compatibility GL_ARB_explicit_attrib_location GL_ARB_explicit_uniform_location GL_ARB_fragmen
+t_coord_conventions GL_ARB_fragment_layer_viewport GL_ARB_fragment_program GL_ARB_fragment_program_shadow GL_ARB_fragment_shader GL_ARB_fragment_shader_interlock GL_ARB_framebuffer_no_attachments GL_ARB_framebuffer_object GL_ARB_framebuffer_sRGB GL_ARB_geometry_shader4 GL_ARB_get_program_binary GL_ARB_get_texture_sub_image GL_ARB_gl_spirv GL_ARB_gpu_shader5 GL_ARB_gpu_shader_fp64 GL_ARB_gpu_shader_int64 GL_ARB_half_float_pixel GL_ARB_half_float_vertex GL_ARB_imaging GL_ARB_indirect_parameters GL_ARB_instanced_arrays GL_ARB_internalformat_query GL_ARB_internalformat_query2 GL_ARB_invalidate_subdata GL_ARB_map_buffer_alignment GL_ARB_map_buffer_range GL_ARB_multi_bind GL_ARB_multi_draw_indirect GL_ARB_multisample GL_ARB_multitexture GL_ARB_occlusion_query GL_ARB_occlusion_query2 GL_ARB_parallel_shader_compile GL_ARB_pipeline_statistics_query GL_ARB_pixel_buffer_object GL_ARB_point_parameters GL_ARB_point_sprite GL_ARB_polygon_offset_clamp GL_ARB_post_depth_coverage GL_ARB_program_interface_query GL_ARB_provoki
+ng_vertex GL_ARB_query_buffer_object GL_ARB_robust_buffer_access_behavior GL_ARB_robustness GL_ARB_sample_locations GL_ARB_sample_shading GL_ARB_sampler_objects GL_ARB_seamless_cube_map GL_ARB_seamless_cubemap_per_texture GL_ARB_separate_shader_objects GL_ARB_shader_atomic_counter_ops GL_ARB_shader_atomic_counters GL_ARB_shader_ballot GL_ARB_shader_bit_encoding GL_ARB_shader_clock GL_ARB_shader_draw_parameters GL_ARB_shader_group_vote GL_ARB_shader_image_load_store GL_ARB_shader_image_size GL_ARB_shader_objects GL_ARB_shader_precision GL_ARB_shader_storage_buffer_object GL_ARB_shader_subroutine GL_ARB_shader_texture_image_samples GL_ARB_shader_texture_lod GL_ARB_shading_language_100 GL_ARB_shader_viewport_layer_array GL_ARB_shading_language_420pack GL_ARB_shading_language_include GL_ARB_shading_language_packing GL_ARB_shadow GL_ARB_sparse_buffer GL_ARB_sparse_texture GL_ARB_sparse_texture2 GL_ARB_sparse_texture_clamp GL_ARB_spirv_extensions GL_ARB_stencil_texturing GL_ARB_sync GL_ARB_tessellation_shader GL_A
+RB_texture_barrier GL_ARB_texture_border_clamp GL_ARB_texture_buffer_object GL_ARB_texture_buffer_object_rgb32 GL_ARB_texture_buffer_range GL_ARB_texture_compression GL_ARB_texture_compression_bptc GL_ARB_texture_compression_rgtc GL_ARB_texture_cube_map GL_ARB_texture_cube_map_array GL_ARB_texture_env_add GL_ARB_texture_env_combine GL_ARB_texture_env_crossbar GL_ARB_texture_env_dot3 GL_ARB_texture_filter_anisotropic GL_ARB_texture_filter_minmax GL_ARB_texture_float GL_ARB_texture_gather GL_ARB_texture_mirror_clamp_to_edge GL_ARB_texture_mirrored_repeat GL_ARB_texture_multisample GL_ARB_texture_non_power_of_two GL_ARB_texture_query_levels GL_ARB_texture_query_lod GL_ARB_texture_rectangle GL_ARB_texture_rg GL_ARB_texture_rgb10_a2ui GL_ARB_texture_stencil8 GL_ARB_texture_storage GL_ARB_texture_storage_multisample GL_ARB_texture_swizzle GL_ARB_texture_view GL_ARB_timer_query GL_ARB_transform_feedback2 GL_ARB_transform_feedback3 GL_ARB_transform_feedback_instanced GL_ARB_transform_feedback_overflow_query GL_ARB_t
+ranspose_matrix GL_ARB_uniform_buffer_object GL_ARB_vertex_array_bgra GL_ARB_vertex_array_object GL_ARB_vertex_attrib_64bit GL_ARB_vertex_attrib_binding GL_ARB_vertex_buffer_object GL_ARB_vertex_program GL_ARB_vertex_shader GL_ARB_vertex_type_10f_11f_11f_rev GL_ARB_vertex_type_2_10_10_10_rev GL_ARB_viewport_array GL_ARB_window_pos GL_ATI_draw_buffers GL_ATI_texture_float GL_ATI_texture_mirror_once GL_S3_s3tc GL_EXT_texture_env_add GL_EXT_abgr GL_EXT_bgra GL_EXT_bindable_uniform GL_EXT_blend_color GL_EXT_blend_equation_separate GL_EXT_blend_func_separate GL_EXT_blend_minmax GL_EXT_blend_subtract GL_EXT_compiled_vertex_array GL_EXT_Cg_shader GL_EXT_depth_bounds_test GL_EXT_direct_state_access GL_EXT_draw_buffers2 GL_EXT_draw_instanced GL_EXT_draw_range_elements GL_EXT_fog_coord GL_EXT_framebuffer_blit GL_EXT_framebuffer_multisample GL_EXTX_framebuffer_mixed_formats GL_EXT_framebuffer_multisample_blit_scaled GL_EXT_framebuffer_object GL_EXT_framebuffer_sRGB GL_EXT_geometry_shader4 GL_EXT_gpu_program_parameters 
+GL_EXT_gpu_shader4 GL_EXT_multi_draw_arrays GL_EXT_multiview_texture_multisample GL_EXT_multiview_timer_query GL_EXT_packed_depth_stencil GL_EXT_packed_float GL_EXT_packed_pixels GL_EXT_pixel_buffer_object GL_EXT_point_parameters GL_EXT_polygon_offset_clamp GL_EXT_post_depth_coverage GL_EXT_provoking_vertex GL_EXT_raster_multisample GL_EXT_rescale_normal GL_EXT_secondary_color GL_EXT_separate_shader_objects GL_EXT_separate_specular_color GL_EXT_shader_image_load_formatted GL_EXT_shader_image_load_store GL_EXT_shader_integer_mix GL_EXT_shadow_funcs GL_EXT_sparse_texture2 GL_EXT_stencil_two_side GL_EXT_stencil_wrap GL_EXT_texture3D GL_EXT_texture_array GL_EXT_texture_buffer_object GL_EXT_texture_compression_dxt1 GL_EXT_texture_compression_latc GL_EXT_texture_compression_rgtc GL_EXT_texture_compression_s3tc GL_EXT_texture_cube_map GL_EXT_texture_edge_clamp GL_EXT_texture_env_combine GL_EXT_texture_env_dot3 GL_EXT_texture_filter_anisotropic GL_EXT_texture_filter_minmax GL_EXT_texture_integer GL_EXT_texture_lod G
+L_EXT_texture_lod_bias GL_EXT_texture_mirror_clamp GL_EXT_texture_object GL_EXT_texture_shadow_lod GL_EXT_texture_shared_exponent GL_EXT_texture_sRGB GL_EXT_texture_sRGB_R8 GL_EXT_texture_sRGB_decode GL_EXT_texture_storage GL_EXT_texture_swizzle GL_EXT_timer_query GL_EXT_transform_feedback2 GL_EXT_vertex_array GL_EXT_vertex_array_bgra GL_EXT_vertex_attrib_64bit GL_EXT_window_rectangles GL_EXT_x11_sync_object GL_EXT_import_sync_object GL_NV_robustness_video_memory_purge GL_IBM_rasterpos_clip GL_IBM_texture_mirrored_repeat GL_KHR_context_flush_control GL_KHR_debug GL_EXT_memory_object GL_EXT_memory_object_fd GL_NV_memory_object_sparse GL_KHR_parallel_shader_compile GL_KHR_no_error GL_KHR_robust_buffer_access_behavior GL_KHR_robustness GL_EXT_semaphore GL_EXT_semaphore_fd GL_NV_timeline_semaphore GL_KHR_shader_subgroup GL_KTX_buffer_region GL_NV_alpha_to_coverage_dither_control GL_NV_bindless_multi_draw_indirect GL_NV_bindless_multi_draw_indirect_count GL_NV_bindless_texture GL_NV_blend_equation_advanced GL_NV_
+blend_equation_advanced_coherent GL_NVX_blend_equation_advanced_multi_draw_buffers GL_NV_blend_minmax_factor GL_NV_blend_square GL_NV_clip_space_w_scaling GL_NV_command_list GL_NV_compute_program5 GL_NV_compute_shader_derivatives GL_NV_conditional_render GL_NV_conservative_raster GL_NV_conservative_raster_dilate GL_NV_conservative_raster_pre_snap GL_NV_conservative_raster_pre_snap_triangles GL_NV_conservative_raster_underestimation GL_NV_copy_depth_to_color GL_NV_copy_image GL_NV_depth_buffer_float GL_NV_depth_clamp GL_NV_draw_texture GL_NV_draw_vulkan_image GL_NV_ES1_1_compatibility GL_NV_ES3_1_compatibility GL_NV_explicit_multisample GL_NV_feature_query GL_NV_fence GL_NV_fill_rectangle GL_NV_float_buffer GL_NV_fog_distance GL_NV_fragment_coverage_to_color GL_NV_fragment_program GL_NV_fragment_program_option GL_NV_fragment_program2 GL_NV_fragment_shader_barycentric GL_NV_fragment_shader_interlock GL_NV_framebuffer_mixed_samples GL_NV_framebuffer_multisample_coverage GL_NV_geometry_shader4 GL_NV_geometry_sha
+der_passthrough GL_NV_gpu_program4 GL_NV_internalformat_sample_query GL_NV_gpu_program4_1 GL_NV_gpu_program5 GL_NV_gpu_program5_mem_extended GL_NV_gpu_program_fp64 GL_NV_gpu_shader5 GL_NV_half_float GL_NV_light_max_exponent GL_NV_memory_attachment GL_NV_mesh_shader GL_NV_multisample_coverage GL_NV_multisample_filter_hint GL_NV_occlusion_query GL_NV_packed_depth_stencil GL_NV_parameter_buffer_object GL_NV_parameter_buffer_object2 GL_NV_path_rendering GL_NV_path_rendering_shared_edge GL_NV_pixel_data_range GL_NV_point_sprite GL_NV_primitive_restart GL_NV_primitive_shading_rate GL_NV_query_resource GL_NV_query_resource_tag GL_NV_register_combiners GL_NV_register_combiners2 GL_NV_representative_fragment_test GL_NV_sample_locations GL_NV_sample_mask_override_coverage GL_NV_scissor_exclusive GL_NV_shader_atomic_counters GL_NV_shader_atomic_float GL_NV_shader_atomic_float64 GL_NV_shader_atomic_fp16_vector GL_NV_shader_atomic_int64 GL_NV_shader_buffer_load GL_NV_shader_storage_buffer_object GL_NV_shader_subgroup_par
+titioned GL_NV_shader_texture_footprint GL_NV_shading_rate_image GL_NV_stereo_view_rendering GL_NV_texgen_reflection GL_NV_texture_barrier GL_NV_texture_compression_vtc GL_NV_texture_dirty_tile_map GL_NV_texture_env_combine4 GL_NV_texture_multisample GL_NV_texture_rectangle GL_NV_texture_rectangle_compressed GL_NV_texture_shader GL_NV_texture_shader2 GL_NV_texture_shader3 GL_NV_transform_feedback GL_NV_transform_feedback2 GL_NV_uniform_buffer_unified_memory GL_NV_uniform_buffer_std430_layout GL_NV_vdpau_interop GL_NV_vdpau_interop2 GL_NV_vertex_array_range GL_NV_vertex_array_range2 GL_NV_vertex_attrib_integer_64bit GL_NV_vertex_buffer_unified_memory GL_NV_vertex_program GL_NV_vertex_program1_1 GL_NV_vertex_program2 GL_NV_vertex_program2_option GL_NV_vertex_program3 GL_NV_viewport_array2 GL_NV_viewport_swizzle GL_NVX_conditional_render GL_NV_gpu_multicast GL_NVX_progress_fence GL_NVX_gpu_memory_info GL_NVX_nvenc_interop GL_NV_shader_thread_group GL_NV_shader_thread_shuffle GL_KHR_blend_equation_advanced GL_KH
+R_blend_equation_advanced_coherent GL_OVR_multiview GL_OVR_multiview2 GL_SGIS_generate_mipmap GL_SGIS_texture_lod GL_SGIX_depth_texture GL_SGIX_shadow GL_SUN_slice_accum
+OPENGL LOG: Creating OpenGL 4.5 graphics device ; Context level  <OpenGL 4.5> ; Context handle 192698728
+Initialize mono
+Mono path[0] = '/home/saher/Unity/Hub/Editor/2022.3.38f1/Editor/Data/Managed'
+Mono path[1] = '/home/saher/Unity/Hub/Editor/2022.3.38f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-linux'
+Mono config path = '/home/saher/Unity/Hub/Editor/2022.3.38f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56264
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: /home/saher/Unity/Hub/Editor/2022.3.38f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: /home/saher/Unity/Hub/Editor/2022.3.38f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: /home/saher/Unity/Hub/Editor/2022.3.38f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
+Registered in 0.011359 seconds.
+- Loaded All Assemblies, in  0.324 seconds
+Native extension for LinuxStandalone target not found
+Native extension for Android target not found
+Android Extension - Scanning For ADB Devices 211 ms
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.558 seconds
+Domain Reload Profiling: 883ms
+	BeginReloadAssembly (63ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (33ms)
+	RebuildNativeTypeToScriptingClass (7ms)
+	initialDomainReloadingComplete (73ms)
+	LoadAllAssembliesAndSetupDomain (149ms)
+		LoadAssemblies (64ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (145ms)
+			TypeCache.Refresh (144ms)
+				TypeCache.ScanAssembly (130ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (559ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (501ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (341ms)
+			SetLoadedEditorAssemblies (3ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (2ms)
+			ProcessInitializeOnLoadAttributes (109ms)
+			ProcessInitializeOnLoadMethodAttributes (45ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+========================================================================
+Worker process is ready to serve import requests
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  0.623 seconds
+Refreshing native plugins compatible for Editor in 0.96 ms, found 0 plugins.
+Native extension for LinuxStandalone target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+[ScriptCompilation] NOT recompiling all scripts because this is an import worker process. Reason to compile was: Define symbols changed
+Package Manager log level set to [2]
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.736 seconds
+Domain Reload Profiling: 1358ms
+	BeginReloadAssembly (129ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (6ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (24ms)
+	RebuildCommonClasses (32ms)
+	RebuildNativeTypeToScriptingClass (7ms)
+	initialDomainReloadingComplete (42ms)
+	LoadAllAssembliesAndSetupDomain (410ms)
+		LoadAssemblies (227ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (243ms)
+			TypeCache.Refresh (206ms)
+				TypeCache.ScanAssembly (186ms)
+			ScanForSourceGeneratedMonoScriptInfo (24ms)
+			ResolveRequiredComponents (12ms)
+	FinalizeReload (737ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (530ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (52ms)
+			SetLoadedEditorAssemblies (3ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (66ms)
+			ProcessInitializeOnLoadAttributes (345ms)
+			ProcessInitializeOnLoadMethodAttributes (61ms)
+			AfterProcessingInitializeOnLoad (3ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (3ms)
+Launched and connected shader compiler UnityShaderCompiler after 0.01 seconds
+Refreshing native plugins compatible for Editor in 1.05 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5827 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 96 unused Assets / (3.7 MB). Loaded Objects now: 6269.
+Memory consumption went from 229.6 MB to 225.9 MB.
+Total: 6.153126 ms (FindLiveObjects: 0.506320 ms CreateObjectMapping: 0.595635 ms MarkObjects: 3.911353 ms  DeleteObjects: 1.138102 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:scripting/monoscript/fileName/TMP_FontFeatureTable.cs: 5ff9812058e8c02a5b04eaa88778f2a5 -> cbd25d300d7ed4d969d60cb9f98f2826
+  custom:scripting/monoscript/fileName/TMP_SDFShaderGUI.cs: 082588c068c6e819b94cdf417f8b7551 -> 1460619486eb6e8da302e26af5538aaa
+  custom:scripting/monoscript/fileName/TMP_SubMeshUI.cs: 7a6337f74438df5e26b302bbbbc41105 -> 748262c65738bc5e1c553ae7a37a0c73
+  custom:scripting/monoscript/fileName/TMPro_ContextMenus.cs: fbbbcbf9b4eb950e9aeda2d70529152c -> 06b3d4b27f337b8d846ca7117f3251e1
+  custom:scripting/monoscript/fileName/TMPro_FontAssetCreatorWindow.cs: 9d68c1aab1c646cdf3e70083dc01df96 -> 0d0900483ed9b57d4ccc2ff58d1220b3
+  custom:scripting/monoscript/fileName/TMP_EditorResourceManager.cs: 30391129c5b96f298e44c099ae0fab57 -> f56b80268a934198a76acc6f4cef503c
+  custom:scripting/monoscript/fileName/TMP_InputFieldEditor.cs: 8f2095c37e5fd5ed563d60163f0c2e52 -> a6f05406e9cdb59679382b884c14216a
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:scripting/monoscript/fileName/TMP_TextParsingUtilities.cs: 47331f425db7fa5c443a11c866530503 -> 8b3fe20641ae0dd97405135955c706a3
+  custom:scripting/monoscript/fileName/TMP_EditorCoroutine.cs: 01d80099920d11c11bfa87417e26164b -> 04cbf5ce6e541d98265aa7668ef82832
+  custom:scripting/monoscript/fileName/TMP_StyleSheetEditor.cs: b6503d890746d6150e0f267f43ce60e4 -> 38b210a450ac855df2d81ab0242c2feb
+  custom:scripting/monoscript/fileName/TMPro_Private.cs: 8f6297df34271fdb1ce2d9607ec6261d -> 90647cc400823b41df847a6cbfc29026
+  custom:scripting/monoscript/fileName/TMP_MeshInfo.cs: 375ed9fada55d6bf39f9352ef1dd520b -> 89833651f7d905e51b340ec2afe531d1
+  custom:scripting/monoscript/fileName/TMP_SpriteCharacter.cs: fe232bb280dddc880a01918d3502c13a -> 81dc73ff0878d6528202f8be44877b26
+  custom:scripting/monoscript/fileName/TMP_ShaderUtilities.cs: 75ec062faab558cb3190dcd3e4820547 -> 84a261643983e306d02445da38ed662f
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:scripting/monoscript/fileName/TMP_UpdateManager.cs: 2b12c9b6d4082e0390a306eceed60fc6 -> fa7e71df671c5b3088b39753e4bbc70d
+  custom:scripting/monoscript/fileName/TMP_EditorUtility.cs: f68b71b7543cddf9e4cdf261d5f519e5 -> b242106620cbbc38f0411146a086b885
+  custom:scripting/monoscript/fileName/TMP_SpriteGlyphPropertyDrawer.cs: 4a6f1515709a40d92e24c84ec92fc53a -> 1447c7afab82cf56bc359d5c7fba114e
+  custom:scripting/monoscript/fileName/TMP_SpriteAssetMenu.cs: a42d2dc20ed9558b36972dc6e6d71655 -> 05ea7b84320d1b77a6d1ae49c41ee9cc
+  custom:scripting/monoscript/fileName/TMP_ColorGradient.cs: 3baf9c6d3c50fc594e68e0c756eb8779 -> 8d91c7c4749088eca69648d37a965bf8
+  custom:scripting/monoscript/fileName/TMP_PreBuildProcessor.cs: d965cd4513e689cb01c0481012a89dee -> 790c12dcd4980aa978fd28fb6f89fb37
+  custom:scripting/monoscript/fileName/TMP_SerializedPropertyHolder.cs: 9860586610cb3d91ae7f4ce33ab22d0b -> 99e5dbc1fa1abe750acc8166e4243be8
+  custom:scripting/monoscript/fileName/TMP_SpriteCharacterPropertyDrawer.cs: 63186d320ccdf4dfa06fbce4e897d3f3 -> 14565b4e4f9266584dc3194fd967d252
+  custom:scripting/monoscript/fileName/DropdownOptionListDrawer.cs: 342ee3f9c806e60b189c02609042c492 -> 4362475bc384312c771d88865ee2f40d
+  custom:scripting/monoscript/fileName/TMP_CharacterPropertyDrawer.cs: 0fc1d1caf2f580e74b2224e6797250e4 -> ddc6f8909fdac3de9238e9b86e411c3e
+  custom:scripting/monoscript/fileName/TMP_FontAssetEditor.cs: ff94a59ea0ba0aa81aa8a7f307f2efd3 -> e359b61135381f6b1d7b8c7e97a930f3
+  custom:scripting/monoscript/fileName/TMP_FontAsset_CreationMenu.cs: 18345b423cea91a35f20f73f48aee7e1 -> 1c5caeb31a0df734411a201aca87cb03
+  custom:scripting/monoscript/fileName/TMP_ScrollbarEventHandler.cs: 55de10d862075cd935d8381c309f39e0 -> c015e39b5a3f1a14518ce039f30e10af
+  custom:scripting/monoscript/fileName/TMP_ObjectPool.cs: 8f6297df34271fdb1ce2d9607ec6261d -> 90647cc400823b41df847a6cbfc29026
+  custom:scripting/monoscript/fileName/TMP_FontAssetUtilities.cs: d84a52975d941e769af4ae15b3aaa211 -> 5b7a9bc9c5c56e3cb5ccc808a2bdd9e4
+  custom:scripting/monoscript/fileName/TMP_FontAssetCommon.cs: 4a5ab4d4426385ab38edd57c118cd485 -> 2b5f11ccf8aacaf9b5ea6564bf2b0d57
+  custom:scripting/monoscript/fileName/TMP_TextInfo.cs: d86eebf32f36b8febee06365f862b403 -> 9e4eb698c4c168829682cbe659418e8f
+  custom:scripting/monoscript/fileName/TextContainer.cs: 4e3c016869303ab3136387f7870e5adb -> 245c032a15fbc12850861c707e37b027
+  custom:scripting/monoscript/fileName/TMP_SubMesh_Editor.cs: 6199a3bf0c204e3bdded9f5f05415a32 -> b381eb4c2ad4ef265088242d67c5b140
+  custom:scripting/monoscript/fileName/TMP_TextElement.cs: fb8354965187a75f506d9a9df85f19dd -> 5dfb95666bd41ecc32948097824aba23
+  custom:scripting/monoscript/fileName/TMP_Text.cs: c453c9b4dcb2bfad1083e3b49dfa3983 -> 5cba61e283281e8dbf7dadaabcd638dc
+  custom:CustomObjectIndexerAttribute: 6f130b4f1f3eefe895d1cfd4dd9bb293 -> 
+  custom:scripting/monoscript/fileName/TMP_PostBuildProcessHandler.cs: 728d00fd9070cbfe6d8df45c08e57305 -> c69b388004562ecb0f789fc3759d9651
+  custom:scripting/monoscript/fileName/TMP_DropdownEditor.cs: 6df138b51e278f9c93bd4976e96aa952 -> 2d907ee76ef876797c15186180266847
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:scripting/monoscript/fileName/TMP_FontAsset.cs: 52c81438acb65fa444fe26964ef0345b -> 6c1db4680a96f294cf0af87a0b8099aa
+  custom:scripting/monoscript/fileName/TMP_SubMeshUI_Editor.cs: 765ce633a5bfada7c5afc51aed8631bb -> 119a633ce37cc27ac209988b5de61d96
+  custom:scripting/monoscript/fileName/TMP_BaseEditorPanel.cs: bf7c6aff8663a36814779dfe47e82e00 -> f4b9967705e7bb57152fef4117417ba7
+  custom:scripting/monoscript/fileName/TMP_SettingsEditor.cs: aa2b5eadaadb4b54b49cd650a2246119 -> 56bf06371df7e13c5b8cc88becb89a4d
+  custom:scripting/monoscript/fileName/TMP_UpdateRegistery.cs: 62691e6bdb107984e7d826316a6498e1 -> 1f23864d29c3a03d22aa9b00a337cf78
+  custom:scripting/monoscript/fileName/FastAction.cs: 94d6ead813247e604740a116c5fa92db -> dfbe75b66b645b53472915ad2590af11
+  custom:scripting/monoscript/fileName/TMPro_TextContainerEditor.cs: a97aca5bcf1b2486a0f60b2c7a935c42 -> b2fbc5db24221a870c4de162a712cbfe
+  custom:scripting/monoscript/fileName/TMP_TextAlignmentDrawer.cs: ad15f73780bb9949f148eddcc3c3fbf7 -> 011b7908ef5eb5e9dea532c77e85c538
+  custom:scripting/monoscript/fileName/TMPro_CreateObjectMenu.cs: e9e63aff764c7e7fd08e66f87103df4d -> ddee59388caa7a56693342f3a805d427
+  custom:scripting/monoscript/fileName/TMP_Asset.cs: dcedda1866ab6edcf1af2d4525512628 -> 7e95c8d89188057bea8fc9569c9aa309
+  custom:scripting/monoscript/fileName/TMP_ColorGradientEditor.cs: 187fe88a4e95285275d1781f1da14d92 -> ed654c9d45026a5f71e6e9535130c15f
+  custom:scripting/monoscript/fileName/TMP_BitmapShaderGUI.cs: ef806c32b355e8831ed4eb3f5e3400ff -> 2ce3ac811452d1d6d82e565157cac3e2
+  custom:scripting/monoscript/fileName/TMP_ColorGradientAssetMenu.cs: 79ee3689ecabb3de162f43faa3b27adc -> 83563be632f8167fcdca7878d36901f9
+  custom:scripting/monoscript/fileName/TMP_GlyphPropertyDrawer.cs: 75006bca208b32d4fc4710404c538acf -> 56b500a16a5c8f635a7bfdd702279864
+  custom:scripting/monoscript/fileName/TMP_SpriteGlyph.cs: 52a9bbe662618c4a5697bdefcba63d59 -> cb4cdca5a4c6415e4f27ee5280164c41
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:scripting/monoscript/fileName/TMP_UIStyleManager.cs: f54fffa86b286da3a3329c601ca8d03e -> 66d96f3fa9ea14a5a6ed3f92d3bbe0f1
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:scripting/monoscript/fileName/TMPro_EventManager.cs: 9ebed0b1e26a8c995d644c176e696d93 -> 4c7492301243f935f7a463360f91d217
+  custom:scripting/monoscript/fileName/GlyphRectPropertyDrawer.cs: d355023434b9b8f82f7070cb40c7c036 -> bdec415148eac17379112822c8814df5
+  custom:scripting/monoscript/fileName/TMPro_UGUI_Private.cs: 8f6297df34271fdb1ce2d9607ec6261d -> 90647cc400823b41df847a6cbfc29026
+  custom:scripting/monoscript/fileName/TMP_TextElement_Legacy.cs: 33cc86d4b4c35f95c6446ea70ef56fc4 -> 6e11e173cb695b15e8cce3cd1e1cb2a7
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:scripting/monoscript/fileName/TMP_Settings.cs: 957f1889ca66b295dca8f725cc81558d -> 68d1204aae2aa6d0a54c151b7af443e7
+  custom:scripting/monoscript/fileName/TMPro_SortingLayerHelper.cs: e3aabd077ed12370ac46dda129ef572e -> 8b86ad735987eff6a1277352e9e8d9b6
+  custom:AudioImporter_EditorPlatform: 2f0ff77a95e0ac474e3e8eeba4e2f7cb -> 
+  custom:scripting/monoscript/fileName/TMP_ResourcesManager.cs: 0d972ba50c38c5b25fe15fb0c61ada2b -> 64252a073d41e9c6f4e95b5f68ac966c
+  custom:scripting/monoscript/fileName/TMPro_TexturePostProcessor.cs: d21743efde4e74198703a65b965619ea -> 0750ad2b775120fa59f760172dc340ad
+  custom:scripting/monoscript/fileName/TMP_PackageResourceImporter.cs: 5335f4ee7041812300af31a777e4f584 -> 949b6e7fa2132b400d5c4aaf9c34421a
+  custom:scripting/monoscript/fileName/TMP_Style.cs: 22d5739edd705d10f980250dcfd7fde0 -> ecc9948baa78373f3076151d1a0642d9
+  custom:scripting/monoscript/fileName/TMP_EditorPanelUI.cs: 6242af713a75147e6e5820bfce936424 -> 0c3fb43855adf1da22258c211d01a47d
+  custom:scripting/monoscript/fileName/TMP_InputField.cs: 8fed3480abb5543168012b207b39349b -> f7712ab842984f124274656d749eca3d
+  custom:scripting/monoscript/fileName/TMP_Sprite.cs: e9945527ea1584af23f8f41ce4b844b4 -> 0ee3c386846aa132dd254421fac18cd1
+  custom:scripting/monoscript/fileName/TMP_StyleSheet.cs: b6deb5f646a1f5ad7b696d32618ba797 -> de73099b6bd4b9281c92feedf1315618
+  custom:scripting/monoscript/fileName/TMP_PackageUtilities.cs: 029634ff6f667ebc9454d70fde4def50 -> 89e6e95503dd36070edf73e7aaab4557
+  custom:scripting/monoscript/fileName/TMP_GlyphPairAdjustmentRecordPropertyDrawer.cs: 6f07d27e8ea91e29d6bd5f39dd8deb23 -> 1a07941369755af9e0a102a45e9058c5
+  custom:scripting/monoscript/fileName/TMP_TextUtilities.cs: f68f97869f24792bf3a3694d69de955c -> aab2855e68416a0a1f2f8904059662aa
+  custom:scripting/monoscript/fileName/TMP_Dropdown.cs: 39f6048c754db30f2da2ea32254db16b -> ecea2f8babcb40d207d2e73158251f60
+  custom:scripting/monoscript/fileName/TMP_CharacterInfo.cs: d2593478681404ce2cbd40e4e2f8a6d3 -> c840ce0b0aa6c1faafb27b3b884b2328
+  custom:scripting/monoscript/fileName/TMP_ListPool.cs: 8f6297df34271fdb1ce2d9607ec6261d -> 90647cc400823b41df847a6cbfc29026
+  custom:scripting/monoscript/fileName/MaterialReferenceManager.cs: eaedc912311d98c6b58e199f6250c848 -> c970e86594a0f568cbda548f2d4462c1
+  custom:scripting/monoscript/fileName/ITextPreProcessor.cs: 28ed6b2ca482997555fb0291bd20c40d -> a7aa94de5d5bfce2bdd74516315faaf2
+  custom:scripting/monoscript/fileName/TMPro_EditorShaderUtilities.cs: 1203fb3feabf58cb81d888055364f838 -> f4cbef9348a73d49f1efb8d10ff07bf0
+  custom:scripting/monoscript/fileName/GlyphMetricsPropertyDrawer.cs: dd0833870bcea17556e6d67c750c6ffc -> 438b07e6eae795dab04c32f51ac4e752
+  custom:scripting/monoscript/fileName/TMP_DefaultControls.cs: 1798ee96b3c83cf7d4cea690bb04976a -> 2673e29173eb9307fa53ee17c15332ed
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:scripting/monoscript/fileName/TMP_RichTextTagsCommon.cs: d28b21b13d6cea8fa92671f9a2a1f20d -> 5462d55f8a9ad882f9a7f2d708a6978b
+  custom:scripting/monoscript/fileName/TMPro_ExtensionMethods.cs: 3d34decc871f763d4c9c61f1fe0f3275 -> 479bffcc157b89693ffc4c2ef2374861
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/TMPro_MeshUtilities.cs: 183dd3a7e1b70c109767dd5059a390dd -> 2237d160e4d9e81a7d899dc235029cb3
+  custom:scripting/monoscript/fileName/TMP_Compatibility.cs: d5209fd9c6a9aef9cccdbfb4f06bd571 -> 3ef1f12d3c823dd740c7c596ab076c61
+  custom:scripting/monoscript/fileName/TMP_SpriteAssetImportFormats.cs: 3cc56654a2015a96112916e9636fbe6f -> 920e3140228fbd530b0080254da22d88
+  custom:scripting/monoscript/fileName/TMP_StyleAssetMenu.cs: d695e815510410a6715fa00ae5e73f57 -> 60e7743122a0686d1131101c521adac6
+  custom:scripting/monoscript/fileName/TMP_MaterialManager.cs: 1382feee688fee3eebaa5e9d7b47e98d -> 441d72ec3c04a8da6a351f60fff95465
+  custom:scripting/monoscript/fileName/TMP_SpriteAsset.cs: b46309090c7f7da519ff6ef3172bd077 -> 8d06882cb45c7664f8d7c3079ee8757f
+  custom:scripting/monoscript/fileName/TMP_ResourcesLoader.cs: f71e35ced40721d6906e578fb6e7f0e9 -> 6f1f07799f3cfe795f955033c27f98ed
+  custom:scripting/monoscript/fileName/TMP_FontFeaturesCommon.cs: 89ff6ee76bb6f84827488d597e70ea5a -> 7d1db71d73353e7dd97f094c509882fa
+  custom:scripting/monoscript/fileName/TMP_LineInfo.cs: 22ff02e7762110d3cc1f4bc096ea014d -> bb529d63c9723788bd7143f27cd69eaf
+  custom:scripting/monoscript/fileName/TMP_EditorPanel.cs: 0bd13db7cdfa07805bfadd631c0ddba8 -> 0631f68be4ca0623bf3e313ec9becbc9
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:scripting/monoscript/fileName/TMP_BaseShaderGUI.cs: 2c2d4519754bb0c1dd0a107014b7ac8a -> 25118693f24c47c8a4b530b8bff26574
+  custom:scripting/monoscript/fileName/TMP_SpriteAssetImporter.cs: 06875a6ac5102e58811218e1c5dd33ca -> 675c97d72afe988872a20f51812f7cdf
+  custom:scripting/monoscript/fileName/TMP_SpriteAssetEditor.cs: 7dcaf47692799a91aa4e5cd439bc54d0 -> 8a42af05e85c0eed4128787976375b45
+  custom:scripting/monoscript/fileName/TMP_Character.cs: 2bff3626198e4d2228876f1e687078e0 -> 015720458ea991fbf07357eae19532db
+  custom:scripting/monoscript/fileName/TMP_SubMesh.cs: ff760a824537d48706351b95c8d4be21 -> 9fd75270af40187985e5c14cc85ebe42
+  custom:scripting/monoscript/fileName/TMP_CoroutineTween.cs: d4d869f6662b40274a62453f83c8a425 -> 76849b8d6d4ce499ad8ffee762e4a4af
+  custom:scripting/monoscript/fileName/TMP_SpriteAnimator.cs: 126f1482d1430ed8648c2a6d8d693c6d -> bf3a797c3a059d3698e93e0031d7f11c
+  custom:scripting/monoscript/fileName/TMP_TextProcessingStack.cs: ef8795fce16f80562f220a2f8bcb6bd2 -> 6146dd1b7f9b90aa342ef9794e387c23
+  custom:scripting/monoscript/fileName/TMP_InputValidator.cs: e99335724872b7fcd0e5352c682debe0 -> 5e0d679d98dae60baa87977011e0ed51
+  custom:scripting/monoscript/fileName/TMP_SelectionCaret.cs: ed141b1915a10b9c7ff9136666b54ee9 -> d2a06fefe973175bffa10d62f788c481
+========================================================================
+Received Import Request.
+  Time since last request: 23420.405425 seconds.
+  path: Assets/stove.fbx
+  artifactKey: Guid(0695b374a3e90873bbbfcfb8b6e0f818) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/stove.fbx using Guid(0695b374a3e90873bbbfcfb8b6e0f818) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+[PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '35cf679ba9443b3d2faba477438b2b28') in 1.008349 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 142
+========================================================================
+Received Import Request.
+  Time since last request: 5.780719 seconds.
+  path: Assets/Sprites
+  artifactKey: Guid(9b40e86cd2386cd5ea8c10f1507424d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites using Guid(9b40e86cd2386cd5ea8c10f1507424d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) [PhysX] Initialized MultithreadedTaskDispatcher with 12 workers.
+ -> (artifact id: '32f114853dbde2ae61569ee6aa3faa3a') in 0.000374 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0

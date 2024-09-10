@@ -183,6 +183,11 @@ MonoBehaviour:
   acceleration: 100
   deceleration: 100
   maxSpeed: 7
+  canDash: 1
+  isDashing: 0
+  dashingPower: 10
+  dashingTime: 0.2
+  dashingCooldown: 1
 --- !u!114 &6276733846811344239
 MonoBehaviour:
   m_ObjectHideFlags: 0
