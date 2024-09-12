@@ -102,22 +102,21 @@ public class PlayerMovement : MonoBehaviour
         // TODO: Shield Explosion VFX
         Explode();
         yield return new WaitForSeconds(shieldDuration);
-        canShield = true;
         isShielding = false;
+        yield return new WaitForSeconds(shieldCooldown);
+        canShield = true;
     }
 
     private void Explode(){
         // Detect enemies within the explosion radius
         Collider2D[] enemiesInRange = Physics2D.OverlapCircleAll(transform.position, explosionRadius, enemyLayer);
 
-        Debug.Log("Enemies in range: " + enemiesInRange.Length);
         foreach (Collider2D enemy in enemiesInRange)
         {
             // Calculate the direction from the player to the enemy
             Vector2 direction = enemy.transform.position - transform.position;
             direction.Normalize();  // Ensure the direction vector is normalized (length of 1)
 
-            Debug.Log("Force: " + direction * explosionForce);
             // Apply force to the enemy to push them away
             Rigidbody2D enemyRigidbody = enemy.GetComponent<Rigidbody2D>();
             if (enemyRigidbody != null)
@@ -128,10 +127,6 @@ public class PlayerMovement : MonoBehaviour
 
         // Optionally: Add explosion effects, sound, etc.
         Debug.Log("Explosion triggered!");
-    }
-
-    void StartShieldCooldown(){
-        
     }
 
     private void OnDrawGizmosSelected() {
