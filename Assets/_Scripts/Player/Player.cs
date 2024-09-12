@@ -14,33 +14,29 @@ public class Player : MonoBehaviour
         if(Input.GetMouseButtonDown(0)) Shoot();
     }
 
-    public void Shoot(){
+    public void Shoot() {
         // Get mouse position in world space
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        mousePosition.z = 0;  // Set z to 0 since we're working in 2D
+        mousePosition.z = 0;
 
-        // Calculate the direction from the player to the mouse
+        // Calculate direction to mouse and angle at which to shoot bullet then instantiate bullet
         Vector2 direction = (mousePosition - transform.position).normalized;
-
-        // Calculate the angle of rotation for the bullet
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-
-        // Instantiate the bullet and rotate it
         GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.Euler(0, 0, angle + bulletRotationOffset));
 
         // Add velocity to the bullet in the direction of the mouse
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.velocity = direction * bulletSpeed;
+
     }
 
-    public void TakeDamage(float damage){
+    public void TakeDamage(float damage) {
         Debug.Log("Player took damage");
     }
 
-    public void Die(){
+    public void Die() {
         Debug.Log("Player died");
         Destroy(gameObject);
     }
-
 
 }
