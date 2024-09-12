@@ -20,7 +20,7 @@ public class HealthBar : MonoBehaviour {
 
     void Update() {
         // Can remove, just for testing
-        DecreaseHealthOverTime();
+        // DecreaseHealthOverTime();
     }
 
     // Funtion to increase health over time

@@ -20,7 +20,7 @@ public class PanicBar : MonoBehaviour {
 
     void Update() {
         // Can remove, just for testing
-        IncreasePanicOverTime();
+        // IncreasePanicOverTime();
     }
 
     // Funtion to increase panic over time
