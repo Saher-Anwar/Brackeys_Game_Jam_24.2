@@ -1,8 +1,8 @@
 using System.Collections;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
-{
+public class PlayerMovement : MonoBehaviour {
+
     [Header("Components")]
     [SerializeField] Rigidbody2D rb;
     [SerializeField] TrailRenderer tr;
@@ -19,18 +19,17 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float dashingPower = 24f;
     [SerializeField] float dashingTime = .2f;
     [SerializeField] float dashingCooldown = 1f;
+    [SerializeField] private Cooldown cooldown;
 
     private Vector2 currentVelocity;
     private Vector2 input;
 
-    void Awake()
-    {
+    void Awake() {
         rb = GetComponent<Rigidbody2D>();
         tr = GetComponent<TrailRenderer>();
     }
 
-    void Update()
-    {
+    void Update() {
         if (isDashing) return;
 
         // Gather input (WASD or Arrow Keys)
@@ -42,18 +41,15 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    void FixedUpdate()
-    {
+    void FixedUpdate() {
         if (isDashing) return;
 
         // Smooth acceleration and deceleration
-        if (input.magnitude > 0)
-        {
+        if (input.magnitude > 0) {
             // Accelerate the player towards the target velocity
             currentVelocity = Vector2.MoveTowards(currentVelocity, input * moveSpeed, acceleration * Time.fixedDeltaTime);
         }
-        else
-        {
+        else {
             // Decelerate the player to zero when no input
             currentVelocity = Vector2.MoveTowards(currentVelocity, Vector2.zero, deceleration * Time.fixedDeltaTime);
         }
@@ -65,9 +61,9 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = currentVelocity;
     }
 
-    IEnumerator Dash()
-    {
+    IEnumerator Dash() {
         // TODO: add trailer renderer
+        if (cooldown.isCooldown) yield break;
         canDash = false;
         isDashing = true;
         rb.velocity = new Vector2(input.x * dashingPower, input.y * dashingPower);
@@ -77,6 +73,7 @@ public class PlayerMovement : MonoBehaviour
         isDashing = false;
         yield return new WaitForSeconds(dashingCooldown);
         canDash = true;
+        cooldown.Use();
     }
 
 }

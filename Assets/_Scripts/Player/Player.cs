@@ -1,7 +1,7 @@
 using UnityEngine;
 
-public class Player : MonoBehaviour
-{
+public class Player : MonoBehaviour {
+
     [SerializeField]
     public GameObject bulletPrefab;
     [SerializeField]
@@ -13,7 +13,7 @@ public class Player : MonoBehaviour
         if(Input.GetMouseButtonDown(0)) Shoot();
     }
 
-    public void Shoot(){
+    public void Shoot() {
         // Get mouse position in world space
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousePosition.z = 0;  // Set z to 0 since we're working in 2D
@@ -34,12 +34,13 @@ public class Player : MonoBehaviour
         Debug.Log("Instantiated bullet and set direction");
     }
 
-    public void TakeDamage(float damage){
+    public void TakeDamage(float damage) {
         Debug.Log("Player took damage");
     }
 
-    public void Die(){
+    public void Die() {
         Debug.Log("Player died");
         Destroy(gameObject);
     }
+
 }
