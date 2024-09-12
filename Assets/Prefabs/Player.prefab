@@ -271,7 +271,7 @@ MonoBehaviour:
   isDashing: 0
   dashingPower: 10
   dashingTime: 0.2
-  dashingCooldown: 1
+  dashingCooldown: 3
   canShield: 1
   isShielding: 0
   shieldDeplyDelay: 3

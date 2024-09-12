@@ -124,13 +124,16 @@ public class PlayerMovement : MonoBehaviour {
         rb.velocity = Vector2.zero;
         // TODO: Activate shield VFX
         yield return new WaitForSeconds(shieldDeplyDelay);
+
         // TODO: Shield Explosion VFX
         Explode();
         yield return new WaitForSeconds(shieldDuration);
+
         isShielding = false;
         // Set next shield time
         nextShieldTime = Time.time + shieldCooldown;
         yield return new WaitForSeconds(shieldCooldown);
+        
         canShield = true;
     }
 
