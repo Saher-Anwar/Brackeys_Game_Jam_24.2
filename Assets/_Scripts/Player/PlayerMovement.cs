@@ -34,6 +34,8 @@ public class PlayerMovement : MonoBehaviour {
     [Header("UI Elements")]
     [SerializeField] Image dashIcon;
     [SerializeField] Text cooldownText;
+    [SerializeField] Image shieldIcon;
+    [SerializeField] Text shieldCooldownText;
 
     [Header("Private Variables")]
     private Vector2 currentVelocity;
