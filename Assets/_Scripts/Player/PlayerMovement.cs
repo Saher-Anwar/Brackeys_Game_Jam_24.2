@@ -51,9 +51,8 @@ public class PlayerMovement : MonoBehaviour {
     void Update() {
         if (isDashing || isShielding) return;
 
-        // Gather input (WASD or Arrow Keys)
         input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-        input.Normalize();  // Keep diagonal movement consistent in speed
+        input.Normalize();
         if(Input.GetKeyDown(KeyCode.LeftShift) && canDash){
             StartCoroutine(Dash());
         }
@@ -79,20 +78,22 @@ public class PlayerMovement : MonoBehaviour {
         }
         // Clamp the velocity to max speed
         currentVelocity = Vector2.ClampMagnitude(currentVelocity, maxSpeed);
-        // Set the Rigidbody velocity to the calculated smooth velocity
         rb.velocity = currentVelocity;
     }
 
     IEnumerator Dash() {
+
         // Start the dash
         canDash = false;
         isDashing = true;
         rb.velocity = new Vector2(input.x * dashingPower, input.y * dashingPower);
         tr.emitting = true;
         yield return new WaitForSeconds(dashingTime);
+
         // End the dash
         tr.emitting = false;
         isDashing = false;
+
         // Set next dash time
         nextDashTime = Time.time + dashingCooldown;
         yield return new WaitForSeconds(dashingCooldown);
@@ -140,16 +141,14 @@ public class PlayerMovement : MonoBehaviour {
         foreach (Collider2D enemy in enemiesInRange) {
             // Calculate the direction from the player to the enemy
             Vector2 direction = enemy.transform.position - transform.position;
-            direction.Normalize();  // Ensure the direction vector is normalized (length of 1)
+            direction.Normalize();
 
             // Apply force to the enemy to push them away
-            Rigidbody2D enemyRigidbody = enemy.GetComponent<Rigidbody2D>();
-            if (enemyRigidbody != null) {
-                enemyRigidbody.AddForce(direction * explosionForce, ForceMode2D.Impulse);
-            }
+            IEnemy currEnemy = enemy.GetComponent<IEnemy>();
+            currEnemy.ApplyKnockback(direction * explosionForce, ForceMode2D.Impulse);
         }
 
-        // Optionally: Add explosion effects, sound, etc.
+        // Todo: Add explosion effects, sound, etc.
         Debug.Log("Explosion triggered!");
     }
 
