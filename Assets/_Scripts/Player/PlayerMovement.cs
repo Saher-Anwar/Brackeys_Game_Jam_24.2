@@ -41,14 +41,14 @@ public class PlayerMovement : MonoBehaviour {
     private Vector2 currentVelocity;
     private Vector2 input;
     private float nextDashTime = 0f;
+    private float nextShieldTime = 0f;
 
     void Awake() {
         rb = GetComponent<Rigidbody2D>();
         tr = GetComponent<TrailRenderer>();
     }
 
-    void Update()
-    {
+    void Update() {
         if (isDashing || isShielding) return;
 
         // Gather input (WASD or Arrow Keys)
@@ -101,18 +101,23 @@ public class PlayerMovement : MonoBehaviour {
 
     // Function to update the UI elements for the dash cooldown
     void UpdateCooldownUI() {
-        if (dashIcon != null) {
-            float remainingTime = Mathf.Max(0, nextDashTime - Time.time);
-            cooldownText.text = remainingTime > 0 ? remainingTime.ToString("F1") + "s" : "";
+        // Dash cooldown UI update
+        if (dashIcon != null && cooldownText != null) {
+            float remainingDashTime = Mathf.Max(0, nextDashTime - Time.time);
+            cooldownText.text = remainingDashTime > 0 ? remainingDashTime.ToString("F1") + "s" : "";
+            float dashCooldownProgress = Mathf.Clamp01((nextDashTime - Time.time) / dashingCooldown);
+            dashIcon.fillAmount = 1 - dashCooldownProgress;
         }
-        if (cooldownText != null) {
-            float cooldownProgress = Mathf.Clamp01((nextDashTime - Time.time) / dashingCooldown);
-            dashIcon.fillAmount = 1-cooldownProgress;
+        // Shield cooldown UI update
+        if (shieldIcon != null && shieldCooldownText != null) {
+            float remainingShieldTime = Mathf.Max(0, nextShieldTime - Time.time);
+            shieldCooldownText.text = remainingShieldTime > 0 ? remainingShieldTime.ToString("F1") + "s" : "";
+            float shieldCooldownProgress = Mathf.Clamp01((nextShieldTime - Time.time) / shieldCooldown);
+            shieldIcon.fillAmount = 1 - shieldCooldownProgress;
         }
     }
 
-    IEnumerator Shield()
-    {
+    IEnumerator Shield() {
         canShield = false;
         isShielding = true;
         rb.velocity = Vector2.zero;
@@ -122,24 +127,24 @@ public class PlayerMovement : MonoBehaviour {
         Explode();
         yield return new WaitForSeconds(shieldDuration);
         isShielding = false;
+        // Set next shield time
+        nextShieldTime = Time.time + shieldCooldown;
         yield return new WaitForSeconds(shieldCooldown);
         canShield = true;
     }
 
-    private void Explode(){
+    private void Explode() {
         // Detect enemies within the explosion radius
         Collider2D[] enemiesInRange = Physics2D.OverlapCircleAll(transform.position, explosionRadius, enemyLayer);
 
-        foreach (Collider2D enemy in enemiesInRange)
-        {
+        foreach (Collider2D enemy in enemiesInRange) {
             // Calculate the direction from the player to the enemy
             Vector2 direction = enemy.transform.position - transform.position;
             direction.Normalize();  // Ensure the direction vector is normalized (length of 1)
 
             // Apply force to the enemy to push them away
             Rigidbody2D enemyRigidbody = enemy.GetComponent<Rigidbody2D>();
-            if (enemyRigidbody != null)
-            {
+            if (enemyRigidbody != null) {
                 enemyRigidbody.AddForce(direction * explosionForce, ForceMode2D.Impulse);
             }
         }

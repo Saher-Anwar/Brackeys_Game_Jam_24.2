@@ -61,8 +61,8 @@ MonoBehaviour:
   m_NormalMapDistance: 3
   m_NormalMapQuality: 2
   m_UseNormalMap: 0
-  m_ShadowIntensityEnabled: 0
-  m_ShadowIntensity: 0.75
+  m_ShadowIntensityEnabled: 1
+  m_ShadowIntensity: 0.15
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
@@ -272,6 +272,20 @@ MonoBehaviour:
   dashingPower: 10
   dashingTime: 0.2
   dashingCooldown: 1
+  canShield: 1
+  isShielding: 0
+  shieldDeplyDelay: 3
+  shieldDuration: 1
+  shieldCooldown: 20
+  explosionRadius: 3
+  explosionForce: 5
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  dashIcon: {fileID: 0}
+  cooldownText: {fileID: 0}
+  shieldIcon: {fileID: 0}
+  shieldCooldownText: {fileID: 0}
 --- !u!114 &6276733846811344239
 MonoBehaviour:
   m_ObjectHideFlags: 0
