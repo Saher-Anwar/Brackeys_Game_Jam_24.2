@@ -4,30 +4,57 @@ using UnityEngine;
 public class MeleeEnemy : MonoBehaviour, IEnemy
 {
     [Header("Movement Settings")]
-    [SerializeField] private Transform player;
-    [SerializeField] private Rigidbody2D rb;
-    [SerializeField] private float speed = 1f;
+    [SerializeField] Player player;
+    [SerializeField] Rigidbody2D rb;
+    [SerializeField] float speed = 1f;
+
+    [Header("Attack Settings")]
+    [SerializeField] float damage = 10f;
+
+    [Header("Test Settings")]
+    [SerializeField] float minAttackDistance = 3f;
 
     [Header("Death Settings")]
-    [SerializeField] private float deathDelay = 1f;
+    [SerializeField] float deathDelay = 1f;
 
     float knockbackCooldown = .5f;
     bool isKnockedback = false;
+
+    float attackCooldown = 1f;
+    bool isAttacking = false;
 
     private void Awake() 
     {
         if (!rb) rb = GetComponent<Rigidbody2D>();
     }
 
+    private void Update() {
+        if(!isAttacking && Vector2.Distance(transform.position, player.transform.position) < minAttackDistance)
+        {
+            StartCoroutine(Attack(damage));
+            return;
+        } 
+    }
+
     private void FixedUpdate() 
     {
-        if(isKnockedback) return;
+        if(isKnockedback || isAttacking) return;
 
         Move();
     }
 
-    public void Attack(float damage)
+    public IEnumerator Attack(float damage)
     {
+        if(player == null) yield break;
+        
+        isAttacking = true;
+        rb.velocity = Vector2.zero;
+        player.TakeDamage(damage);
+
+        // TODO: Play animation, VFX, SFX, etc.
+        yield return new WaitForSeconds(attackCooldown);
+
+        isAttacking = false;
     }
 
     public void Die()
@@ -54,24 +81,25 @@ public class MeleeEnemy : MonoBehaviour, IEnemy
         isKnockedback = false;
     }
 
-    // Movement function for following the player
     private void FollowPlayer()
     {
         if (player == null) return;  
 
         // Set velocity in direction of player
-        Vector2 direction = (player.position - transform.position).normalized;
+        Vector2 direction = (player.transform.position - transform.position).normalized;
         rb.velocity = direction * speed;
     }
 
-    // Draw a line or arrow in the Scene view to visualize the direction to the player
     private void OnDrawGizmosSelected()
     {
         // Optionally draw a line or arrow showing the direction to the player in the Scene view
         if (player != null)
         {
             Gizmos.color = Color.red;
-            Gizmos.DrawLine(transform.position, player.position);
+            Gizmos.DrawLine(transform.position, player.transform.position);
         }
+
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, minAttackDistance);
     }
 }

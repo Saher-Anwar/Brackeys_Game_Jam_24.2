@@ -37,7 +37,6 @@ public class PlayerMovement : MonoBehaviour {
     [SerializeField] Image shieldIcon;
     [SerializeField] Text shieldCooldownText;
 
-    [Header("Private Variables")]
     private Vector2 currentVelocity;
     private Vector2 input;
     private float nextDashTime = 0f;
@@ -133,7 +132,7 @@ public class PlayerMovement : MonoBehaviour {
         // Set next shield time
         nextShieldTime = Time.time + shieldCooldown;
         yield return new WaitForSeconds(shieldCooldown);
-        
+
         canShield = true;
     }
 

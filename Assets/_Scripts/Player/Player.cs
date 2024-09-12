@@ -10,6 +10,9 @@ public class Player : MonoBehaviour
     [SerializeField]
     private int bulletRotationOffset = 90;
 
+    [SerializeField] int health = 100;
+    int maxHealth = 100;
+
     private void Update() {
         if(Input.GetMouseButtonDown(0)) Shoot();
     }
@@ -31,7 +34,14 @@ public class Player : MonoBehaviour
     }
 
     public void TakeDamage(float damage) {
-        Debug.Log("Player took damage");
+        if(health <= 0){
+            Die();
+            return;
+        }
+        
+        health -= (int)damage;
+
+        // TODO: Add VFX & graphics    
     }
 
     public void Die() {

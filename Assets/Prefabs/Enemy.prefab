@@ -145,7 +145,7 @@ MonoBehaviour:
   - {x: 0.54870796, y: -0.30702358, z: 0}
   m_ShapePathHash: 2133356093
   m_Mesh: {fileID: 0}
-  m_InstanceId: -233314
+  m_InstanceId: -240454
   m_LocalBounds:
     m_Center: {x: 0.0033083558, y: 0.15678847, z: 0}
     m_Extent: {x: 0.5453996, y: 0.46956927, z: 0}
@@ -162,8 +162,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  rb: {fileID: 0}
+  rb: {fileID: 3931711133087411242}
   speed: 1
+  damage: 10
+  minAttackDistance: 0.99
   deathDelay: 1
 --- !u!61 &9061386772246412499
 BoxCollider2D:
@@ -194,7 +196,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.0011952519, y: 0.1704784}

@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 /// <summary>
@@ -5,7 +6,7 @@ using UnityEngine;
 /// </summary>
 public interface IEnemy
 {
-    public void Attack(float damage);
+    IEnumerator Attack(float damage);
     public void TakeDamage(float damage);
     public void Move();
     public void ApplyKnockback(Vector2 force, ForceMode2D forceMode = ForceMode2D.Force);
