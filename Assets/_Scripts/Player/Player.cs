@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    [Header("Bullet Settings")]
     [SerializeField]
     public GameObject bulletPrefab;
     [SerializeField]
@@ -30,8 +31,6 @@ public class Player : MonoBehaviour
         // Add velocity to the bullet in the direction of the mouse
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.velocity = direction * bulletSpeed;
-
-        Debug.Log("Instantiated bullet and set direction");
     }
 
     public void TakeDamage(float damage){
@@ -43,5 +42,5 @@ public class Player : MonoBehaviour
         Destroy(gameObject);
     }
 
-    
+
 }

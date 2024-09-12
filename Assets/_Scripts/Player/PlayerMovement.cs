@@ -20,6 +20,16 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float dashingTime = .2f;
     [SerializeField] float dashingCooldown = 1f;
 
+    [Header("Explosive Shield Settings")]
+    [SerializeField] bool canShield = true;
+    [SerializeField] bool isShielding;
+    [SerializeField] float shieldDeplyDelay = 3f;
+    [SerializeField] float shieldDuration = 1f;
+    [SerializeField] float shieldCooldown = 20f;
+    [SerializeField]float explosionRadius = 5f;
+    [SerializeField] float explosionForce = 10f;
+    [SerializeField] LayerMask enemyLayer;
+
     private Vector2 currentVelocity;
     private Vector2 input;
 
@@ -31,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        if (isDashing) return;
+        if (isDashing || isShielding) return;
 
         // Gather input (WASD or Arrow Keys)
         input = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
@@ -40,12 +50,16 @@ public class PlayerMovement : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.LeftShift) && canDash){
             StartCoroutine(Dash());
         }
+
+        if(Input.GetKeyDown(KeyCode.LeftControl) && canShield){
+            StartCoroutine(Shield());
+        }
     }
 
     void FixedUpdate()
     {
-        if (isDashing) return;
-
+        if (isDashing || isShielding) return;
+        
         // Smooth acceleration and deceleration
         if (input.magnitude > 0)
         {
@@ -67,7 +81,6 @@ public class PlayerMovement : MonoBehaviour
 
     IEnumerator Dash()
     {
-        // TODO: add trailer renderer
         canDash = false;
         isDashing = true;
         rb.velocity = new Vector2(input.x * dashingPower, input.y * dashingPower);
@@ -79,4 +92,50 @@ public class PlayerMovement : MonoBehaviour
         canDash = true;
     }
 
+    IEnumerator Shield()
+    {
+        canShield = false;
+        isShielding = true;
+        rb.velocity = Vector2.zero;
+        // TODO: Activate shield VFX
+        yield return new WaitForSeconds(shieldDeplyDelay);
+        // TODO: Shield Explosion VFX
+        Explode();
+        yield return new WaitForSeconds(shieldDuration);
+        canShield = true;
+        isShielding = false;
+    }
+
+    private void Explode(){
+        // Detect enemies within the explosion radius
+        Collider2D[] enemiesInRange = Physics2D.OverlapCircleAll(transform.position, explosionRadius, enemyLayer);
+
+        Debug.Log("Enemies in range: " + enemiesInRange.Length);
+        foreach (Collider2D enemy in enemiesInRange)
+        {
+            // Calculate the direction from the player to the enemy
+            Vector2 direction = enemy.transform.position - transform.position;
+            direction.Normalize();  // Ensure the direction vector is normalized (length of 1)
+
+            Debug.Log("Force: " + direction * explosionForce);
+            // Apply force to the enemy to push them away
+            Rigidbody2D enemyRigidbody = enemy.GetComponent<Rigidbody2D>();
+            if (enemyRigidbody != null)
+            {
+                enemyRigidbody.AddForce(direction * explosionForce, ForceMode2D.Impulse);
+            }
+        }
+
+        // Optionally: Add explosion effects, sound, etc.
+        Debug.Log("Explosion triggered!");
+    }
+
+    void StartShieldCooldown(){
+        
+    }
+
+    private void OnDrawGizmosSelected() {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, explosionRadius);
+    }
 }
