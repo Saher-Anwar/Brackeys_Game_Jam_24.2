@@ -6,8 +6,7 @@ public class MeleeEnemy : Enemy
     [Header("Test Settings")]
     [SerializeField] float minAttackDistance = 3f;
 
-    float attackCooldown = 1f;
-    bool isAttacking = false;
+
 
     private void Awake() 
     {

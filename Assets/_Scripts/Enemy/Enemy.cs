@@ -16,6 +16,8 @@ public abstract class Enemy : MonoBehaviour, IEnemy
 
     protected float knockbackCooldown = .5f;
     protected bool isKnockedback = false;
+    protected float attackCooldown = 1f;
+    protected bool isAttacking = false;
 
     public virtual void ApplyKnockback(Vector2 force, ForceMode2D forceMode = ForceMode2D.Force)
     {
