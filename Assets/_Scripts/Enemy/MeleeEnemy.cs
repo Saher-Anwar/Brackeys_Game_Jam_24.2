@@ -1,21 +1,10 @@
 using System.Collections;
 using UnityEngine;
 
-public class MeleeEnemy : MonoBehaviour, IEnemy
+public class MeleeEnemy : Enemy
 {
-    [Header("Movement Settings")]
-    [SerializeField] Player player;
-    [SerializeField] Rigidbody2D rb;
-    [SerializeField] float speed = 1f;
-
-    [Header("Attack Settings")]
-    [SerializeField] float damage = 10f;
-
     [Header("Test Settings")]
     [SerializeField] float minAttackDistance = 3f;
-
-    [Header("Death Settings")]
-    [SerializeField] float deathDelay = 1f;
 
     float knockbackCooldown = .5f;
     bool isKnockedback = false;
@@ -45,7 +34,7 @@ public class MeleeEnemy : MonoBehaviour, IEnemy
         Move();
     }
 
-    public IEnumerator Attack(float damage)
+    public override IEnumerator Attack(float damage)
     {
         if(player == null) yield break;
 
@@ -59,16 +48,16 @@ public class MeleeEnemy : MonoBehaviour, IEnemy
         isAttacking = false;
     }
 
-    public void Die()
+    public override void Die()
     {
         Destroy(gameObject, deathDelay);
     }
 
-    public void TakeDamage(float damage)
+    public override void TakeDamage(float damage)
     {
     }
 
-    public void Move(){
+    public override void Move(){
         if (player == null) return;  
 
         // Set velocity in direction of player
@@ -76,7 +65,7 @@ public class MeleeEnemy : MonoBehaviour, IEnemy
         rb.velocity = direction * speed;
     }
 
-    public void ApplyKnockback(Vector2 knockbackForce, ForceMode2D forceMode = ForceMode2D.Force)
+    public override void ApplyKnockback(Vector2 knockbackForce, ForceMode2D forceMode = ForceMode2D.Force)
     {
         isKnockedback = true;
         rb.AddForce(knockbackForce, ForceMode2D.Impulse);

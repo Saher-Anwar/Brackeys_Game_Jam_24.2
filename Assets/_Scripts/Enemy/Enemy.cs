@@ -1,18 +1,38 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class Enemy : MonoBehaviour, IEnemy
 {
-    // Start is called before the first frame update
-    void Start()
+    [Header("Movement Settings")]
+    [SerializeField] protected Player player;
+    [SerializeField] protected Rigidbody2D rb;
+    [SerializeField] protected float speed = 1f;
+
+    [Header("Attack Settings")]
+    [SerializeField] protected float damage = 10f;
+
+    [Header("Death Settings")]
+    [SerializeField] protected float deathDelay = 1f;
+
+
+    public virtual void ApplyKnockback(Vector2 force, ForceMode2D forceMode = ForceMode2D.Force)
     {
-        
     }
 
-    // Update is called once per frame
-    void Update()
+    public virtual IEnumerator Attack(float damage)
     {
-        
+        throw new System.NotImplementedException();
+    }
+
+    public virtual void Die()
+    {
+    }
+
+    public virtual void Move()
+    {
+    }
+
+    public virtual void TakeDamage(float damage)
+    {
     }
 }
