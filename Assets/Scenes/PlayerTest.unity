@@ -552,7 +552,7 @@ PrefabInstance:
       objectReference: {fileID: 1601495496}
     - target: {fileID: 5805669140662617162, guid: 851035f87b38640d28563a711fcdbe33, type: 3}
       propertyPath: m_Name
-      value: Enemy
+      value: Melee Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 8850753795268565470, guid: 851035f87b38640d28563a711fcdbe33, type: 3}
       propertyPath: m_LocalPosition.x
