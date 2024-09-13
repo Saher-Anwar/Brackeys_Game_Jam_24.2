@@ -68,7 +68,13 @@ public class MeleeEnemy : MonoBehaviour, IEnemy
     {
     }
 
-    public void Move() => FollowPlayer();
+    public void Move(){
+        if (player == null) return;  
+
+        // Set velocity in direction of player
+        Vector2 direction = (player.transform.position - transform.position).normalized;
+        rb.velocity = direction * speed;
+    }
 
     public void ApplyKnockback(Vector2 knockbackForce, ForceMode2D forceMode = ForceMode2D.Force)
     {
@@ -81,15 +87,6 @@ public class MeleeEnemy : MonoBehaviour, IEnemy
     {
         yield return new WaitForSeconds(knockbackCooldown);
         isKnockedback = false;
-    }
-
-    private void FollowPlayer()
-    {
-        if (player == null) return;  
-
-        // Set velocity in direction of player
-        Vector2 direction = (player.transform.position - transform.position).normalized;
-        rb.velocity = direction * speed;
     }
 
     private void OnDrawGizmosSelected()
