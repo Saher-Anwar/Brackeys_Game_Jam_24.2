@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 3207058488550313660}
   - component: {fileID: 686609463157116098}
   m_Layer: 0
-  m_Name: Player
+  m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -298,6 +298,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5af68b9eda1bb0825a20815a31dbd10b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthBar: {fileID: 0}
   bulletPrefab: {fileID: 6296389427995880309, guid: a5b3e3fbf207536c987c2e444fe24122, type: 3}
   bulletSpeed: 10
   bulletRotationOffset: 90
