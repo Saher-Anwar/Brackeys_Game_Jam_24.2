@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    [Header("Player Settings")]
+    [SerializeField] HealthBar healthBar;
+
     [Header("Bullet Settings")]
     [SerializeField]
     public GameObject bulletPrefab;
@@ -9,9 +12,6 @@ public class Player : MonoBehaviour
     private float bulletSpeed = 10f;
     [SerializeField]
     private int bulletRotationOffset = 90;
-
-    [SerializeField] int health = 100;
-    int maxHealth = 100;
 
     private void Update() {
         if(Input.GetMouseButtonDown(0)) Shoot();
@@ -34,12 +34,12 @@ public class Player : MonoBehaviour
     }
 
     public void TakeDamage(float damage) {
-        if(health <= 0){
+        if(healthBar.GetHealth() <= 0){
             Die();
             return;
         }
         
-        health -= (int)damage;
+        healthBar.decreaseHealth(damage);
 
         // TODO: Add VFX & graphics    
     }

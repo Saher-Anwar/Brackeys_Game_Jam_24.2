@@ -217,6 +217,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5af68b9eda1bb0825a20815a31dbd10b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1417380204 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4366972359943365253, guid: ae7eced640594284280d9a38aa7f78c5, type: 3}
+  m_PrefabInstance: {fileID: 1772573916}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 328198dfa1b1b2f4bb73b4c632b0809f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!43 &1601495496
 Mesh:
   m_ObjectHideFlags: 0
@@ -766,6 +777,10 @@ PrefabInstance:
       propertyPath: shieldCooldownText
       value: 
       objectReference: {fileID: 1772573917}
+    - target: {fileID: 6276733846811344239, guid: a4132492bb0d70e8981440ebaf63a012, type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 1417380204}
     - target: {fileID: 8272198355995438529, guid: a4132492bb0d70e8981440ebaf63a012, type: 3}
       propertyPath: m_Name
       value: Player

@@ -29,6 +29,8 @@ public class MeleeEnemy : MonoBehaviour, IEnemy
     }
 
     private void Update() {
+        if(player == null) return;
+        
         if(!isAttacking && Vector2.Distance(transform.position, player.transform.position) < minAttackDistance)
         {
             StartCoroutine(Attack(damage));
@@ -46,7 +48,7 @@ public class MeleeEnemy : MonoBehaviour, IEnemy
     public IEnumerator Attack(float damage)
     {
         if(player == null) yield break;
-        
+
         isAttacking = true;
         rb.velocity = Vector2.zero;
         player.TakeDamage(damage);

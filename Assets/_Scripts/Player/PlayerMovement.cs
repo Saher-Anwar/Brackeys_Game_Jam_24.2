@@ -82,6 +82,8 @@ public class PlayerMovement : MonoBehaviour {
 
     IEnumerator Dash() {
 
+        if (tr == null) yield break;
+
         // Start the dash
         canDash = false;
         isDashing = true;
