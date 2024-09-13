@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour, IEnemy
+public abstract class Enemy : MonoBehaviour, IEnemy
 {
     [Header("Movement Settings")]
     [SerializeField] protected Player player;
@@ -24,10 +24,7 @@ public class Enemy : MonoBehaviour, IEnemy
         StartCoroutine(ResetKnockback());
     }
 
-    public virtual IEnumerator Attack(float damage)
-    {
-        throw new System.NotImplementedException();
-    }
+    public abstract IEnumerator Attack(float damage);
 
     public virtual void Die()
     {
