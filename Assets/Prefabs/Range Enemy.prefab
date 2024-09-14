@@ -54,6 +54,7 @@ MonoBehaviour:
   speed: 1
   damage: 10
   deathDelay: 1
+  damagePopupPrefab: {fileID: 6198284154123336692, guid: 42279fd6b2b022e4f844bdc49089df9d, type: 3}
   takeAimTime: 1
   maxAttackDistance: 10
   runAwayDistance: 5
