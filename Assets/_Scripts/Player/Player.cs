@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     private float bulletSpeed = 10f;
     [SerializeField]
     private int bulletRotationOffset = 90;
+    [SerializeField] int bulletLayer; // used to mark the bullets created by this player
 
     GameObject canvas;
 
@@ -33,14 +34,15 @@ public class Player : MonoBehaviour
         Vector2 direction = (mousePosition - transform.position).normalized;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.Euler(0, 0, angle + bulletRotationOffset));
+        bullet.layer = bulletLayer;
 
         // Add velocity to the bullet in the direction of the mouse
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         rb.velocity = direction * bulletSpeed;
-
     }
 
     public void TakeDamage(float damage) {
+        Debug.Log("Player took damage " + damage);
         if(healthBar.GetHealth() <= 0){
             Die();
             return;

@@ -2,12 +2,28 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    [SerializeField] 
     [Range(0,10)]
-    float destroyTime = 5f;
+    [SerializeField] float destroyTime = 5f;
+
+    [SerializeField] float bulletDamage = 10f; 
 
     void Start()
     {
         Destroy(gameObject, destroyTime);       
+    }
+
+    private void OnTriggerEnter2D(Collider2D other) {
+        // if bullet hit the instantiating object, don't do anything
+        if(other.gameObject.layer == this.gameObject.layer) return;
+        if(other.gameObject.layer < 6 || other.gameObject.layer > 7) return;
+        
+        // 6 is layer mask for enemy. 
+        if(other.gameObject.layer == 6){
+            Debug.Log(other.gameObject.name);
+            other.GetComponent<Enemy>().TakeDamage(bulletDamage);
+        } else if(other.gameObject.layer == 7){
+            Debug.Log(other.gameObject.name);
+            other.GetComponent<Player>().TakeDamage(bulletDamage);
+        }
     }
 }

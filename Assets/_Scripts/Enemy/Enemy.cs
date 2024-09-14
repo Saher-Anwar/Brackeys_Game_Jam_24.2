@@ -3,6 +3,9 @@ using UnityEngine;
 
 public abstract class Enemy : MonoBehaviour, IEnemy
 {
+    [Header("Enemy Details")]
+    [SerializeField] protected float health = 100f;
+
     [Header("Movement Settings")]
     [SerializeField] protected Player player;
     [SerializeField] protected Rigidbody2D rb;
@@ -51,6 +54,12 @@ public abstract class Enemy : MonoBehaviour, IEnemy
 
     public virtual void TakeDamage(float damage)
     {
+        Debug.Log("Enemy took damage: " + damage);
+        health -= damage;
+        if (health <= 0)
+        {
+            Die();
+        }
     }
 
     IEnumerator ResetKnockback()

@@ -43,7 +43,10 @@ public class GameManager : Singleton<GameManager>
         // Do something
     }
     public void HandleWin(){}
-    public void HandleLose(){}
+    public void HandleLose(){
+        // TODO: destroy all enemies or simply display "Loser" UI
+
+    }
 }
 
 [Serializable]

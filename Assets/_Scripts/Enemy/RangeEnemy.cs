@@ -12,6 +12,7 @@ public class RangeEnemy : Enemy
     [SerializeField] GameObject bulletPrefab;
     [SerializeField] float bulletRotationOffset = 90f;
     [SerializeField] float bulletSpeed = 10f;
+    [SerializeField] int bulletLayer;
 
     public override IEnumerator Attack(float damage)
     {
@@ -54,6 +55,7 @@ public class RangeEnemy : Enemy
         Vector2 direction = (player.transform.position - transform.position).normalized;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         GameObject bullet = Instantiate(bulletPrefab, transform.position, Quaternion.Euler(0, 0, angle + bulletRotationOffset));
+        bullet.layer = bulletLayer;
 
         // Add velocity to the bullet in the direction of the mouse
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
