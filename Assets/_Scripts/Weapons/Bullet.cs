@@ -19,10 +19,8 @@ public class Bullet : MonoBehaviour
         
         // 6 is layer mask for enemy. 
         if(other.gameObject.layer == 6){
-            Debug.Log(other.gameObject.name);
             other.GetComponent<Enemy>().TakeDamage(bulletDamage);
         } else if(other.gameObject.layer == 7){
-            Debug.Log(other.gameObject.name);
             other.GetComponent<Player>().TakeDamage(bulletDamage);
         }
     }

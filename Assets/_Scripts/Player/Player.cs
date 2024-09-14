@@ -42,7 +42,6 @@ public class Player : MonoBehaviour
     }
 
     public void TakeDamage(float damage) {
-        Debug.Log("Player took damage " + damage);
         if(healthBar.GetHealth() <= 0){
             Die();
             return;
@@ -54,7 +53,6 @@ public class Player : MonoBehaviour
     }
 
     public void Die() {
-        Debug.Log("Player died");
         GameManager.Instance.ChangeState(GameState.Lose);
         Destroy(gameObject);
     }

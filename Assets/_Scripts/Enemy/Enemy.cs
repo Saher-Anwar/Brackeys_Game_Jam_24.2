@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -27,6 +28,15 @@ public abstract class Enemy : MonoBehaviour, IEnemy
         player = GameManager.Instance.player.GetComponent<Player>();
         if(player == null) Debug.LogError("Player is null");
         rb = GetComponent<Rigidbody2D>();
+
+        GameManager.OnBeforeStateChanged += OnStateChanged;
+    }
+
+    private void OnStateChanged(GameState state)
+    {
+        if(state == GameState.Lose){
+            this.enabled = false;
+        }
     }
 
     public virtual void ApplyKnockback(Vector2 force, ForceMode2D forceMode = ForceMode2D.Force)
@@ -54,7 +64,6 @@ public abstract class Enemy : MonoBehaviour, IEnemy
 
     public virtual void TakeDamage(float damage)
     {
-        Debug.Log("Enemy took damage: " + damage);
         health -= damage;
         if (health <= 0)
         {

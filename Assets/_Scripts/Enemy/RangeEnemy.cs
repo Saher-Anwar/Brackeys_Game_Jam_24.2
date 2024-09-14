@@ -51,6 +51,8 @@ public class RangeEnemy : Enemy
     }
 
     void Shoot(){
+        if(player == null) return;
+        
         // Calculate direction to mouse and angle at which to shoot bullet then instantiate bullet
         Vector2 direction = (player.transform.position - transform.position).normalized;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;

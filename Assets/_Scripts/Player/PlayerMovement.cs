@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour {
 
     [Header("Components")]
     [SerializeField] Rigidbody2D rb;
-    [SerializeField] TrailRenderer tr;
+    [SerializeField] TrailRenderer trailRenderer;
 
     [Header("Movement")]
     [SerializeField] float moveSpeed = 5f;
@@ -45,7 +45,7 @@ public class PlayerMovement : MonoBehaviour {
 
     void Awake() {
         rb = GetComponent<Rigidbody2D>();
-        tr = GetComponent<TrailRenderer>();
+        trailRenderer = GetComponent<TrailRenderer>();
     }
 
     private void Start() {
@@ -90,17 +90,17 @@ public class PlayerMovement : MonoBehaviour {
 
     IEnumerator Dash() {
 
-        if (tr == null) yield break;
+        if (trailRenderer == null) yield break;
 
         // Start the dash
         canDash = false;
         isDashing = true;
         rb.velocity = new Vector2(input.x * dashingPower, input.y * dashingPower);
-        tr.emitting = true;
+        trailRenderer.emitting = true;
         yield return new WaitForSeconds(dashingTime);
 
         // End the dash
-        tr.emitting = false;
+        trailRenderer.emitting = false;
         isDashing = false;
 
         // Set next dash time
