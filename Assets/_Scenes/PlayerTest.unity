@@ -245,6 +245,17 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1174789034 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5999812755858641566, guid: ae7eced640594284280d9a38aa7f78c5, type: 3}
+  m_PrefabInstance: {fileID: 1772573916}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a109769e4a4f8f44ba30cec1db32773, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1772573916
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -256,6 +267,10 @@ PrefabInstance:
     - target: {fileID: 4690773384678879071, guid: ae7eced640594284280d9a38aa7f78c5, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 5999812755858641566, guid: ae7eced640594284280d9a38aa7f78c5, type: 3}
+      propertyPath: fillAmount
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8867960444858586615, guid: ae7eced640594284280d9a38aa7f78c5, type: 3}
       propertyPath: m_Pivot.x
@@ -511,6 +526,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7245805242597684994, guid: 891bb3790e54b3fa285a95a65ff72cfd, type: 3}
+      propertyPath: panicBar
+      value: 
+      objectReference: {fileID: 1174789034}
     - target: {fileID: 7693964281462927580, guid: 891bb3790e54b3fa285a95a65ff72cfd, type: 3}
       propertyPath: m_Name
       value: Managers

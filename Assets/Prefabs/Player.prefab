@@ -95,8 +95,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91d1474d89afb756e9cea6ddb2237bde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  light2D: {fileID: 0}
   calmColor: {r: 0.13166668, g: 0.62716603, b: 0.94044757, a: 1}
   panicColor: {r: 0.936752, g: 0.28951734, b: 0.08822826, a: 1}
+  maxIntensity: 7
+  maxOuterRadius: 15
+  maxInnerRadius: 8
 --- !u!1 &7122852873118239426
 GameObject:
   m_ObjectHideFlags: 0
