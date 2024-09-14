@@ -1,36 +1,32 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
 public class PanicBar : MonoBehaviour {
 
-    [SerializeField] private Image panicBarFill;
-    [SerializeField] private float fillRate = 10f;
+    [SerializeField] Image panicBarFill;
+    [SerializeField] float fillAmount = 10f;
+    [SerializeField] float fillDelay = 1f;
 
     // Panic is in the 0-100 range, Level is in the 1-5 range
-    private float maxPanic = 100;
-    private float currentPanic = 0;
-    private int panicLevel = 1;
+    float maxPanic = 100;
+    float currentPanic = 0;
+    int panicLevel = 1;
 
     void Start() {
         currentPanic = 0;
         UpdatePanicLevel();
     }
 
-    void Update() {
+    void Update() {       
         // Can remove, just for testing
-        // IncreasePanicOverTime();
+        IncreasePanicOverTime();
+        UpdatePanicLevel();
     }
 
     // Funtion to increase panic over time
     public void IncreasePanicOverTime() {
-        if (currentPanic < maxPanic) {
-            currentPanic += fillRate * Time.deltaTime;
-            currentPanic = Mathf.Clamp(currentPanic, 0f, maxPanic);
-            panicBarFill.fillAmount = currentPanic / maxPanic;
-            UpdatePanicLevel();
-        }
+        float panicIncreasePerSecond = fillAmount / fillDelay;
+        currentPanic = Mathf.Clamp(currentPanic + (panicIncreasePerSecond * Time.deltaTime), 0, maxPanic);
+        panicBarFill.fillAmount = currentPanic / maxPanic;
     }
 
     // Function to add panic custom amount
@@ -38,7 +34,6 @@ public class PanicBar : MonoBehaviour {
         currentPanic += amount;
         currentPanic = Mathf.Clamp(currentPanic, 0f, maxPanic);
         panicBarFill.fillAmount = currentPanic / maxPanic;
-        UpdatePanicLevel();
     }
 
     // Function to decrease panic custom amount
@@ -46,7 +41,6 @@ public class PanicBar : MonoBehaviour {
         currentPanic -= amount;
         currentPanic = Mathf.Clamp(currentPanic, 0f, maxPanic);
         panicBarFill.fillAmount = currentPanic / maxPanic;
-        UpdatePanicLevel();
     }
 
     // Function to update panic level
@@ -68,9 +62,6 @@ public class PanicBar : MonoBehaviour {
         else {
             panicLevel = 5;
         }
-        // Level can be used to change the game difficulty
-        // Log the panic level here
-        Debug.Log("Panic Level: " + panicLevel);
     }
 
     // Function to get current panic
