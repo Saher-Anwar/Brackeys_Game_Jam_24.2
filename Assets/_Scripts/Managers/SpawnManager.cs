@@ -7,8 +7,10 @@ public class SpawnManager : Singleton<SpawnManager>
     [SerializeField] float maxenemySpawnRadius = 50f;
     [SerializeField] float spawnDelay = 5f;
     [SerializeField] List<Enemy> enemies;
-    
+    public PanicBar panicBar;
+
     GameObject player;
+     
     private void Start() {
         player = GameManager.Instance.player;
         if(player == null) Debug.LogWarning("SpawnManager: Player not found on Start");
@@ -37,6 +39,7 @@ public class SpawnManager : Singleton<SpawnManager>
         Vector3 spawnPosition = GetRandomSpawnPosition();
         Enemy enemy = enemies[UnityEngine.Random.Range(0, enemies.Count)];
         Instantiate(enemy, spawnPosition, Quaternion.identity);
+        panicBar.IncreaseFillAmount();
     }
 
     private Vector3 GetRandomSpawnPosition()

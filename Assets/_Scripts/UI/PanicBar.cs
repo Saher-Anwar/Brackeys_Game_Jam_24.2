@@ -3,8 +3,12 @@ using UnityEngine.UI;
 public class PanicBar : MonoBehaviour {
 
     [SerializeField] Image panicBarFill;
-    [SerializeField] float fillAmount = 10f;
+    [SerializeField] float fillAmount = 1f;
     [SerializeField] float fillDelay = 1f;
+    [SerializeField] float panicIncreasePerEnemySpawned = 0.1f;
+    [SerializeField] float panicDecreasePerEnemyKilled = 0.1f;
+
+    float panicIncreasePerSecond = 0f;
 
     // Panic is in the 0-100 range, Level is in the 1-5 range
     float maxPanic = 100;
@@ -13,6 +17,7 @@ public class PanicBar : MonoBehaviour {
 
     void Start() {
         currentPanic = 0;
+        panicIncreasePerSecond = fillAmount / fillDelay;
         UpdatePanicLevel();
     }
 
@@ -24,10 +29,12 @@ public class PanicBar : MonoBehaviour {
 
     // Funtion to increase panic over time
     public void IncreasePanicOverTime() {
-        float panicIncreasePerSecond = fillAmount / fillDelay;
         currentPanic = Mathf.Clamp(currentPanic + (panicIncreasePerSecond * Time.deltaTime), 0, maxPanic);
         panicBarFill.fillAmount = currentPanic / maxPanic;
     }
+
+    public void IncreaseFillAmount() => fillAmount += panicIncreasePerEnemySpawned;
+    public void decreaseFillAmount() => fillAmount -= panicDecreasePerEnemyKilled;
 
     // Function to add panic custom amount
     public void addPanic (float amount) {

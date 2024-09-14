@@ -51,6 +51,7 @@ public abstract class Enemy : MonoBehaviour, IEnemy
     public virtual void Die()
     {
         Destroy(gameObject, deathDelay);
+        SpawnManager.Instance.panicBar.decreaseFillAmount();
     }
 
     public virtual void Move()
