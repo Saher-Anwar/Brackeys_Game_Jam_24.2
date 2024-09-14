@@ -71,7 +71,7 @@ public abstract class Enemy : MonoBehaviour, IEnemy
 
         // Spawn damage popup at enemy position
         if (damagePopupPrefab != null) {
-            Vector3 popupPosition = transform.position + new Vector3(-1.6f, 0, 0);
+            Vector3 popupPosition = transform.position + new Vector3(-2f, 0, 0);
             DamagePopup.Create(popupPosition, damagePopupPrefab, damage);
         }
 
