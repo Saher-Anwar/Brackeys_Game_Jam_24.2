@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,7 +12,7 @@ public class Timer : MonoBehaviour {
     void Start() {
         timerIsRunning = true;
         timeText = GetComponent<Text>();
-        player = GameObject.Find("Player").GetComponent<Player>();
+        player = GameManager.Instance.player.GetComponent<Player>();
     }
 
     void Update() {

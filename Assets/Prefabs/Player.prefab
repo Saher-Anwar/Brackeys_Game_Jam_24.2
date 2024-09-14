@@ -335,7 +335,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 2843257494125411087}
-  tr: {fileID: 0}
+  tr: {fileID: 6103066632435123805}
   moveSpeed: 5
   acceleration: 100
   deceleration: 100

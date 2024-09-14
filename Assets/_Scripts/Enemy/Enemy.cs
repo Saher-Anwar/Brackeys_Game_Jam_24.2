@@ -21,6 +21,7 @@ public abstract class Enemy : MonoBehaviour, IEnemy
 
     protected virtual void Awake() 
     {
+        player = GameManager.Instance.player.GetComponent<Player>();
         if(player == null) Debug.LogError("Player is null");
         rb = GetComponent<Rigidbody2D>();
     }

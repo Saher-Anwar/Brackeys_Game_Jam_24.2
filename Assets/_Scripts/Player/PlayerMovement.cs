@@ -37,6 +37,7 @@ public class PlayerMovement : MonoBehaviour {
     [SerializeField] Image shieldIcon;
     [SerializeField] Text shieldCooldownText;
 
+    GameObject canvas;
     private Vector2 currentVelocity;
     private Vector2 input;
     private float nextDashTime = 0f;
@@ -45,6 +46,13 @@ public class PlayerMovement : MonoBehaviour {
     void Awake() {
         rb = GetComponent<Rigidbody2D>();
         tr = GetComponent<TrailRenderer>();
+    }
+
+    private void Start() {
+        dashIcon = GameObject.Find("DashImage").GetComponent<Image>();
+        cooldownText = GameObject.Find("DashText").GetComponent<Text>();
+        shieldIcon = GameObject.Find("ShieldImage").GetComponent<Image>();
+        shieldCooldownText = GameObject.Find("ShieldText").GetComponent<Text>();
     }
 
     void Update() {

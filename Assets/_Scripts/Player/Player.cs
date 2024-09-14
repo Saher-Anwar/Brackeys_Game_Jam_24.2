@@ -13,6 +13,13 @@ public class Player : MonoBehaviour
     [SerializeField]
     private int bulletRotationOffset = 90;
 
+    GameObject canvas;
+
+    private void Start() {
+        canvas = GameObject.Find("Canvas");
+        healthBar = canvas.GetComponent<HealthBar>();
+    }
+
     private void Update() {
         if(Input.GetMouseButtonDown(0)) Shoot();
     }
@@ -46,6 +53,7 @@ public class Player : MonoBehaviour
 
     public void Die() {
         Debug.Log("Player died");
+        GameManager.Instance.ChangeState(GameState.Lose);
         Destroy(gameObject);
     }
 
