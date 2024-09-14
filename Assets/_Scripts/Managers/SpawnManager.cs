@@ -59,8 +59,6 @@ public class SpawnManager : Singleton<SpawnManager>
 
     private void OnDrawGizmosSelected() {
         if(player == null) return;
-
-        // Draw the spawn radius
         Gizmos.color = Color.blue;
         Gizmos.DrawWireSphere(player.transform.position, minEnemySpawnRadius);
 

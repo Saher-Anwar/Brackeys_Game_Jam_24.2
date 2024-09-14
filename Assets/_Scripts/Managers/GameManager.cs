@@ -10,6 +10,11 @@ public class GameManager : Singleton<GameManager>
     public static event Action<GameState> OnAfterStateChanged;
     public GameState State {get; private set;}
 
+    protected override void Awake() {
+        base.Awake();
+        player = Instantiate(player, playerSpawnPos, Quaternion.identity);
+    }
+
     void Start() => ChangeState(GameState.Starting);
 
     public void ChangeState(GameState newState){
@@ -36,7 +41,6 @@ public class GameManager : Singleton<GameManager>
 
     public void HandleStarting(){ 
         // Do something
-        player = Instantiate(player, playerSpawnPos, Quaternion.identity);
     }
     public void HandleWin(){}
     public void HandleLose(){}
