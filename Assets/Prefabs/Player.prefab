@@ -101,6 +101,8 @@ MonoBehaviour:
   maxIntensity: 7
   maxOuterRadius: 15
   maxInnerRadius: 8
+  flickerDuration: 0.1
+  flickerInterval: 1
 --- !u!1 &7122852873118239426
 GameObject:
   m_ObjectHideFlags: 0
@@ -309,6 +311,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthBar: {fileID: 0}
+  lightFlickerThreshold: 80
   bulletPrefab: {fileID: 6296389427995880309, guid: a5b3e3fbf207536c987c2e444fe24122, type: 3}
   bulletSpeed: 10
   bulletRotationOffset: 90

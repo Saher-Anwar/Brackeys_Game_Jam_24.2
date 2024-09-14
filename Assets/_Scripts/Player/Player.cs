@@ -4,6 +4,7 @@ public class Player : MonoBehaviour
 {
     [Header("Player Settings")]
     [SerializeField] HealthBar healthBar;
+    [SerializeField] float lightFlickerThreshold = 30f; 
 
     [Header("Bullet Settings")]
     [SerializeField]
@@ -15,10 +16,11 @@ public class Player : MonoBehaviour
     [SerializeField] int bulletLayer; // used to mark the bullets created by this player
 
     GameObject canvas;
-
+    PanicColorChange panicColorChange;
     private void Start() {
         canvas = GameObject.Find("Canvas");
         healthBar = canvas.GetComponent<HealthBar>();
+        panicColorChange = GetComponentInChildren<PanicColorChange>();
     }
 
     private void Update() {
@@ -42,13 +44,21 @@ public class Player : MonoBehaviour
     }
 
     public void TakeDamage(float damage) {
+        healthBar.decreaseHealth(damage);
+
         if(healthBar.GetHealth() <= 0){
             Die();
             return;
         }
-        
-        healthBar.decreaseHealth(damage);
 
+        if(healthBar.GetHealth() <= lightFlickerThreshold){
+            panicColorChange.InitiateFlickering();
+        }
+
+        if(healthBar.GetHealth() > lightFlickerThreshold){
+            panicColorChange.StopFlickering();
+        }
+        
         // TODO: Add VFX & graphics    
     }
 
