@@ -185,6 +185,8 @@ MonoBehaviour:
   rotationSpeed: 50
   healthBar: {fileID: 0}
   pickupEffect: {fileID: 2707051526764700956, guid: ee91b4aacb4d1ce4b82167e39bef3d0d, type: 3}
+  damagePopupPrefab: {fileID: 6198284154123336692, guid: 42279fd6b2b022e4f844bdc49089df9d, type: 3}
+  healthPopupColor: {r: 0, g: 1, b: 0, a: 1}
 --- !u!58 &8163441151462862109
 CircleCollider2D:
   m_ObjectHideFlags: 0

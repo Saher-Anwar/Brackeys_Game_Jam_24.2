@@ -10,6 +10,10 @@ public class Collectible : MonoBehaviour {
     [SerializeField] private HealthBar healthBar;
     [SerializeField] private GameObject pickupEffect;
 
+    [Header("Popup Settings")]
+    [SerializeField] private GameObject damagePopupPrefab;
+    [SerializeField] private Color healthPopupColor = Color.green;
+
     private void Update() {
         // Constant rotation
         transform.Rotate(Vector3.forward * rotationSpeed * Time.deltaTime);
@@ -21,6 +25,11 @@ public class Collectible : MonoBehaviour {
             if (healthBar != null) {
                 // Increase the player's health
                 healthBar.addHealth(healthIncreaseAmount);
+            }
+            // Spawn a damage popup at the player's position
+            if (damagePopupPrefab != null) {
+                Vector3 popupPosition = collision.transform.position + new Vector3(-2f, 0, 0);
+                DamagePopup.Create(popupPosition, damagePopupPrefab, healthIncreaseAmount, healthPopupColor);
             }
             // Destroy the collectible after it has been collected
             if (pickupEffect != null) Instantiate(pickupEffect, transform.position, Quaternion.identity);

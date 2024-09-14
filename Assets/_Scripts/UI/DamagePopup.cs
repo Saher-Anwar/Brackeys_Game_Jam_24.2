@@ -25,10 +25,10 @@ public class DamagePopup : MonoBehaviour {
     private Vector3 initialPosition;
 
     // Function to create a damage popup at a position
-    public static DamagePopup Create(Vector3 position, GameObject prefabDamagePopup, float damageAmount) {
+    public static DamagePopup Create(Vector3 position, GameObject prefabDamagePopup, float damageAmount, Color textColor) {
         Transform damagePopupTransform = Instantiate(prefabDamagePopup, position, Quaternion.identity).transform;
         DamagePopup damagePopup = damagePopupTransform.GetComponent<DamagePopup>();
-        damagePopup.Setup(damageAmount);
+        damagePopup.Setup(damageAmount, textColor);
         return damagePopup;
     }
 
@@ -36,10 +36,13 @@ public class DamagePopup : MonoBehaviour {
         textMesh = transform.GetComponent<TextMeshPro>();
     }
 
-    void Setup(float damageAmount) {
+    void Setup(float damageAmount, Color textColor) {
         // Set the text and reset timer
         textMesh.SetText(damageAmount.ToString());
-        color = textMesh.color;
+        // Apply the color to the text mesh
+        color = textColor;
+        textMesh.color = textColor;
+        // Reset the disappear timer
         disappearTimer = disappearTimerMax;
         // Set unique sorting order to ensure the popups render correctly
         sortingOrder++;

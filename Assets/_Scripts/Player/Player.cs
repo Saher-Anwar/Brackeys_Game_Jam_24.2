@@ -15,6 +15,10 @@ public class Player : MonoBehaviour
     private int bulletRotationOffset = 90;
     [SerializeField] int bulletLayer; // used to mark the bullets created by this player
 
+    [Header("Damage Popup Settings")]
+    [SerializeField] private GameObject damagePopupPrefab;
+    [SerializeField] private Color playerPopupColor = Color.red;
+
     GameObject canvas;
     PanicColorChange panicColorChange;
     private void Start() {
@@ -46,7 +50,13 @@ public class Player : MonoBehaviour
     public void TakeDamage(float damage) {
         healthBar.decreaseHealth(damage);
 
-        if(healthBar.GetHealth() <= 0){
+        // Spawn damage popup at player position
+        if (damagePopupPrefab != null) {
+            Vector3 popupPosition = transform.position + new Vector3(-2f, 0, 0);
+            DamagePopup.Create(popupPosition, damagePopupPrefab, damage, playerPopupColor);
+        }
+
+        if (healthBar.GetHealth() <= 0){
             Die();
             return;
         }

@@ -20,6 +20,7 @@ public abstract class Enemy : MonoBehaviour, IEnemy
 
     [Header("Damage Popup Settings")]
     [SerializeField] private GameObject damagePopupPrefab;
+    [SerializeField] private Color enemyPopupColor = Color.yellow;
 
     protected float knockbackCooldown = .5f;
     protected bool isKnockedback = false;
@@ -73,7 +74,7 @@ public abstract class Enemy : MonoBehaviour, IEnemy
         // Spawn damage popup at enemy position
         if (damagePopupPrefab != null) {
             Vector3 popupPosition = transform.position + new Vector3(-2f, 0, 0);
-            DamagePopup.Create(popupPosition, damagePopupPrefab, damage);
+            DamagePopup.Create(popupPosition, damagePopupPrefab, damage, enemyPopupColor);
         }
 
         if (health <= 0)
