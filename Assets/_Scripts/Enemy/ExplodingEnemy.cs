@@ -5,12 +5,6 @@ public class ExplodingEnemy : Enemy
 {
     [SerializeField] float minAttackDistance = 1f;
 
-    private void Awake() 
-    {
-        if(player == null) Debug.LogError("Player is null");
-        rb = GetComponent<Rigidbody2D>();
-    }
-
     private void Update() {
         if(player == null) return;
         

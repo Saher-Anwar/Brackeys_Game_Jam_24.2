@@ -6,13 +6,6 @@ public class MeleeEnemy : Enemy
     [Header("Test Settings")]
     [SerializeField] float minAttackDistance = 3f;
 
-
-
-    private void Awake() 
-    {
-        if (!rb) rb = GetComponent<Rigidbody2D>();
-    }
-
     private void Update() {
         if(player == null) return;
         

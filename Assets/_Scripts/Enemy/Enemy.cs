@@ -19,6 +19,12 @@ public abstract class Enemy : MonoBehaviour, IEnemy
     protected float attackCooldown = 1f;
     protected bool isAttacking = false;
 
+    protected virtual void Awake() 
+    {
+        if(player == null) Debug.LogError("Player is null");
+        rb = GetComponent<Rigidbody2D>();
+    }
+
     public virtual void ApplyKnockback(Vector2 force, ForceMode2D forceMode = ForceMode2D.Force)
     {
         isKnockedback = true;
