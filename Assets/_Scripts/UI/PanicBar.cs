@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class PanicBar : MonoBehaviour {
 
-    [SerializeField] Image panicBarFill;
+    public Image panicBarFill;
     [SerializeField] float fillAmount = 1f;
     [SerializeField] float fillDelay = 1f;
     [SerializeField] float panicIncreasePerEnemySpawned = 0.1f;

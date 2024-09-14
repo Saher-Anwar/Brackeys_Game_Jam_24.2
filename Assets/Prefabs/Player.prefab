@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5337758111116576393}
   - component: {fileID: 7177184882922912413}
+  - component: {fileID: 7296503414830874093}
   m_Layer: 7
   m_Name: Light 2D
   m_TagString: Untagged
@@ -82,6 +83,20 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!114 &7296503414830874093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1799953015100207488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91d1474d89afb756e9cea6ddb2237bde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  calmColor: {r: 0.13166668, g: 0.62716603, b: 0.94044757, a: 1}
+  panicColor: {r: 0.936752, g: 0.28951734, b: 0.08822826, a: 1}
 --- !u!1 &7122852873118239426
 GameObject:
   m_ObjectHideFlags: 0
@@ -307,7 +322,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 2843257494125411087}
-  tr: {fileID: 6103066632435123805}
+  trailRenderer: {fileID: 0}
   moveSpeed: 5
   acceleration: 100
   deceleration: 100
