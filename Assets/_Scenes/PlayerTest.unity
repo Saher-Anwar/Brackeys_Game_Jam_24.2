@@ -511,14 +511,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7245805242597684994, guid: 891bb3790e54b3fa285a95a65ff72cfd, type: 3}
-      propertyPath: maxenemySpawnRadius
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 7245805242597684994, guid: 891bb3790e54b3fa285a95a65ff72cfd, type: 3}
-      propertyPath: minEnemySpawnRadius
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 7693964281462927580, guid: 891bb3790e54b3fa285a95a65ff72cfd, type: 3}
       propertyPath: m_Name
       value: Managers

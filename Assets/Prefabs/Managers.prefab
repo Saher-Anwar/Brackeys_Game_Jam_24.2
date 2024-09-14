@@ -44,12 +44,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd5bac68a053ad281b8f1e75cd902406, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minEnemySpawnRadius: 25
-  maxenemySpawnRadius: 50
+  minEnemySpawnRadius: 5
+  maxenemySpawnRadius: 10
   spawnDelay: 5
   enemies:
-  - {fileID: 420235193638318691, guid: 851035f87b38640d28563a711fcdbe33, type: 3}
   - {fileID: 6658329203769315298, guid: 1740838409a256d409fef0e29c107de5, type: 3}
+  - {fileID: 420235193638318691, guid: 851035f87b38640d28563a711fcdbe33, type: 3}
   - {fileID: 7645377302644786382, guid: cadf54c8b87a9026cb15f429ea89f8bd, type: 3}
 --- !u!1 &4555124326979041434
 GameObject:
