@@ -18,6 +18,9 @@ public abstract class Enemy : MonoBehaviour, IEnemy
     [Header("Death Settings")]
     [SerializeField] protected float deathDelay = 1f;
 
+    [Header("Damage Popup Settings")]
+    [SerializeField] private GameObject damagePopupPrefab;
+
     protected float knockbackCooldown = .5f;
     protected bool isKnockedback = false;
     protected float attackCooldown = 1f;
@@ -65,6 +68,13 @@ public abstract class Enemy : MonoBehaviour, IEnemy
     public virtual void TakeDamage(float damage)
     {
         health -= damage;
+
+        // Spawn damage popup at enemy position
+        if (damagePopupPrefab != null) {
+            Vector3 popupPosition = transform.position + new Vector3(-1.6f, 0, 0);
+            DamagePopup.Create(popupPosition, damagePopupPrefab, damage);
+        }
+
         if (health <= 0)
         {
             Die();
