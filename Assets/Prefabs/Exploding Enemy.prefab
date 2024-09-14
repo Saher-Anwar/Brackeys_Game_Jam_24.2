@@ -144,11 +144,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5aec1bb79895a1455a0e5acdbb207f66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
   player: {fileID: 0}
   rb: {fileID: 9213289563994009508}
   speed: 1
   damage: 50
   deathDelay: 1
+  damagePopupPrefab: {fileID: 6198284154123336692, guid: 42279fd6b2b022e4f844bdc49089df9d, type: 3}
   minAttackDistance: 1
 --- !u!1 &5454944258939325612
 GameObject:
