@@ -98,12 +98,12 @@ MonoBehaviour:
   light2D: {fileID: 0}
   calmColor: {r: 0.13166668, g: 0.62716603, b: 0.94044757, a: 1}
   panicColor: {r: 0.936752, g: 0.28951734, b: 0.08822826, a: 1}
-  maxIntensity: 7
+  maxIntensity: 5
   maxOuterRadius: 15
   maxInnerRadius: 8
   flickerDuration: 0.1
   flickerInterval: 1
-  flickerIntensityFactor: 0.5
+  flickerIntensityFactor: 0.04
 --- !u!1 &7122852873118239426
 GameObject:
   m_ObjectHideFlags: 0
@@ -318,7 +318,7 @@ MonoBehaviour:
   bulletRotationOffset: 90
   bulletLayer: 7
   damagePopupPrefab: {fileID: 6198284154123336692, guid: 42279fd6b2b022e4f844bdc49089df9d, type: 3}
-  playerColor: {r: 1, g: 0, b: 0, a: 1}
+  playerPopupColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!114 &5813557143263742746
 MonoBehaviour:
   m_ObjectHideFlags: 0

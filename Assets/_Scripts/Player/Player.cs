@@ -61,12 +61,19 @@ public class Player : MonoBehaviour
             return;
         }
 
+        if(healthBar.GetHealth() <= lightFlickerThreshold/2){
+            panicColorChange.increaseFlickerInterval(3);
+            return;
+        }
+
         if(healthBar.GetHealth() <= lightFlickerThreshold){
             panicColorChange.InitiateFlickering();
+            return;
         }
 
         if(healthBar.GetHealth() > lightFlickerThreshold){
             panicColorChange.StopFlickering();
+            return;
         }
         
         // TODO: Add VFX & graphics    

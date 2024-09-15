@@ -53,6 +53,14 @@ public class PanicColorChange : MonoBehaviour
         }
     }
 
+    public void increaseFlickerInterval(float increaseAmount){
+        flickerInterval /= increaseAmount;
+    }
+
+    public void decreaseFlickerInterval(float decreaseAmount){
+        flickerInterval *= decreaseAmount;
+    }
+
     public void StopFlickering(){
         if (isFlickering) // Only stop if flickering is active
         {

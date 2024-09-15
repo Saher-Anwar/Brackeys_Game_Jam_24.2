@@ -29,7 +29,7 @@ public class SpawnManager : Singleton<SpawnManager>
 
     private void OnCollectibleCollected()
     {
-        
+        collectibleCount -= 1;
     }
 
     private void OnGameStateChanged(GameState state)
@@ -57,6 +57,7 @@ public class SpawnManager : Singleton<SpawnManager>
         Vector3 spawnPosition = GetRandomSpawnPosition();
         Collectible collectible = collectibles[UnityEngine.Random.Range(0, collectibles.Count)];
         Instantiate(collectible, spawnPosition, Quaternion.identity);
+        collectibleCount += 1;
     }
 
     void SpawnEnemy()
