@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,6 +15,13 @@ public class Collectible : MonoBehaviour {
     [SerializeField] private GameObject damagePopupPrefab;
     [SerializeField] private Color healthPopupColor = Color.green;
 
+
+    public static event Action OnCollectibleCollected;
+    
+    private void Start() {
+        healthBar = FindObjectOfType<HealthBar>();
+    }
+
     private void Update() {
         // Constant rotation
         transform.Rotate(Vector3.forward * rotationSpeed * Time.deltaTime);
@@ -25,6 +33,7 @@ public class Collectible : MonoBehaviour {
             if (healthBar != null) {
                 // Increase the player's health
                 healthBar.addHealth(healthIncreaseAmount);
+                Debug.Log("Player health increased by " + healthIncreaseAmount);
             }
             // Spawn a damage popup at the player's position
             if (damagePopupPrefab != null) {
@@ -33,6 +42,7 @@ public class Collectible : MonoBehaviour {
             }
             // Destroy the collectible after it has been collected
             if (pickupEffect != null) Instantiate(pickupEffect, transform.position, Quaternion.identity);
+            OnCollectibleCollected?.Invoke();
             Destroy(gameObject);
         }
     }

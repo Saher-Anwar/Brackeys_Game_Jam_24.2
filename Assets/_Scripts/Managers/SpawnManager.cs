@@ -1,21 +1,35 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class SpawnManager : Singleton<SpawnManager>
 {
+    [Header("Enemy Spawn Settings")]
     [SerializeField] float minEnemySpawnRadius = 25f;
     [SerializeField] float maxenemySpawnRadius = 50f;
     [SerializeField] float spawnDelay = 5f;
     [SerializeField] List<Enemy> enemies;
-    public PanicBar panicBar;
 
+    [Header("Collectible Spawn Settings")]
+    [SerializeField] float collectibleSpawnDelay = 5f;
+    [SerializeField] List<Collectible> collectibles;
+    [SerializeField] int maxCollectiblesAllowed = 3;
+    
+    int collectibleCount = 0;
+    public PanicBar panicBar;
     GameObject player;
-     
+
     private void Start() {
         player = GameManager.Instance.player;
         if(player == null) Debug.LogWarning("SpawnManager: Player not found on Start");
 
         GameManager.OnAfterStateChanged += OnGameStateChanged;
+        Collectible.OnCollectibleCollected += OnCollectibleCollected;
+    }
+
+    private void OnCollectibleCollected()
+    {
+        
     }
 
     private void OnGameStateChanged(GameState state)
@@ -24,14 +38,25 @@ public class SpawnManager : Singleton<SpawnManager>
         {
             case GameState.Starting:
                 InvokeRepeating("SpawnEnemy", spawnDelay, spawnDelay);
+                InvokeRepeating("SpawnCollectible", 0f, collectibleSpawnDelay);
                 break;
             case GameState.Lose:
                 CancelInvoke("SpawnEnemy");
+                CancelInvoke("SpawnCollectible");
                 break;
             default:
                 Debug.Log("SpawnManager: Invalid state");
                 break;
         }
+    }
+
+    void SpawnCollectible()
+    {
+        if(collectibleCount >= maxCollectiblesAllowed) return;
+
+        Vector3 spawnPosition = GetRandomSpawnPosition();
+        Collectible collectible = collectibles[UnityEngine.Random.Range(0, collectibles.Count)];
+        Instantiate(collectible, spawnPosition, Quaternion.identity);
     }
 
     void SpawnEnemy()
